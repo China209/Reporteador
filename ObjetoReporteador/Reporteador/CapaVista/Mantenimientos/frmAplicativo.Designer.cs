@@ -54,6 +54,7 @@
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlInferior.SuspendLayout();
@@ -240,6 +241,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(229, 27);
             this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // txtNombre
             // 
@@ -247,6 +249,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(223, 27);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblDescripcion
             // 
@@ -354,6 +357,11 @@
             this.tmrHoraFecha.Enabled = true;
             this.tmrHoraFecha.Tick += new System.EventHandler(this.tmrHoraFecha_Tick);
             // 
+            // ttMensaje
+            // 
+            this.ttMensaje.IsBalloon = true;
+            this.ttMensaje.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // frmAplicativo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -411,5 +419,6 @@
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.ComboBox cmbBuscar;
+        private System.Windows.Forms.ToolTip ttMensaje;
     }
 }

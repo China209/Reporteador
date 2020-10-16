@@ -1,0 +1,97 @@
+﻿using CapaModelo;
+using CapaModelo.Clases_Reporteador;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Odbc;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CapaControlador.ControladoresReporteador
+{
+    public class clsControlAsignacionAplicativo
+    {
+        clsSentencia sentencia = new clsSentencia();
+        clsConexion conexion = new clsConexion();
+        DataTable tabla;
+        OdbcDataAdapter datos;
+        public void insertarModulos(clsReporteAplicativo modulo)
+        {
+            try
+            {
+                string sComando = string.Format("INSERT INTO REPORTE_APLICATIVO(fk_id_reporte, fk_id_aplicativo, fk_id_modulo, estado_reporte_aplicativo) VALUES ({0},{1},{2},{3});", modulo.IReporte, modulo.IAplicativo, modulo.IModulo, modulo.IEstado);
+                this.sentencia.ejecutarQuery(sComando);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Ingresar Datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
+            }
+        }
+        public void modificarModulos(clsReporteAplicativo modulo)
+        {
+            try
+            {
+                string sComando = string.Format("UPDATE REPORTE_APLICATIVO SET fk_id_reporte='{1}', fk_id_modulo='{2}' WHERE fk_id_aplicativo={0};", modulo.IAplicativo, modulo.IReporte,modulo.IModulo);
+                this.sentencia.ejecutarQuery(sComando);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Modificar Datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public void eliminarModulos(int iIDModulo, int iIDReporte)
+        {
+            try
+            {
+                string sComando = string.Format("UPDATE REPORTE_APLICATIVO SET estado_reporte_aplicativo=0 WHERE fk_id_aplicativo={0} AND fk_id_reporte={1};", iIDModulo.ToString(), iIDReporte.ToString());
+                this.sentencia.ejecutarQuery(sComando);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al Eliminar Datos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public DataTable obtenerTodo()
+        {
+            try
+            {
+                string sComando = string.Format("SELECT fk_id_reporte, fk_id_aplicativo, fk_id_modulo FROM REPORTE_APLICATIVO WHERE estado_reporte_aplicativo=1");
+                datos = new OdbcDataAdapter(sComando, conexion.conexion());
+                tabla = new DataTable();
+                datos.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener datos");
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+
+        public DataTable obtenerCamposCombobox(string sCampo1, string sCampo2, string sTabla, string sEstado)
+        {
+            try
+            {
+                string sComando = string.Format("SELECT " + sCampo1 + "," + sCampo2 + " FROM " + sTabla + " WHERE " + sEstado + "=1");
+                datos = new OdbcDataAdapter(sComando, conexion.conexion());
+                tabla = new DataTable();
+                datos.Fill(tabla);
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener datos");
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+    }
+}

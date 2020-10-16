@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModulo));
             this.pnlCuerpo = new System.Windows.Forms.Panel();
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.cmbBuscar = new System.Windows.Forms.ComboBox();
             this.gbxIngresoDatos = new System.Windows.Forms.GroupBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -40,18 +43,15 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.dgvVistaDatos = new System.Windows.Forms.DataGridView();
             this.pnlInferior = new System.Windows.Forms.Panel();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmsEM = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsModificar = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAyuda = new System.Windows.Forms.Button();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
             this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
-            this.btnRefrescar = new System.Windows.Forms.Button();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.cmbBuscar = new System.Windows.Forms.ComboBox();
             this.pnlCuerpo.SuspendLayout();
             this.gbxIngresoDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaDatos)).BeginInit();
@@ -75,6 +75,48 @@
             this.pnlCuerpo.Name = "pnlCuerpo";
             this.pnlCuerpo.Size = new System.Drawing.Size(1274, 591);
             this.pnlCuerpo.TabIndex = 5;
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefrescar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefrescar.FlatAppearance.BorderSize = 0;
+            this.btnRefrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.btnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefrescar.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRefrescar.Location = new System.Drawing.Point(391, 237);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(220, 34);
+            this.btnRefrescar.TabIndex = 13;
+            this.btnRefrescar.Text = "Refrescar";
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Location = new System.Drawing.Point(730, 244);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(62, 20);
+            this.lblBuscar.TabIndex = 12;
+            this.lblBuscar.Text = "Buscar";
+            // 
+            // cmbBuscar
+            // 
+            this.cmbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBuscar.FormattingEnabled = true;
+            this.cmbBuscar.Location = new System.Drawing.Point(819, 241);
+            this.cmbBuscar.Name = "cmbBuscar";
+            this.cmbBuscar.Size = new System.Drawing.Size(401, 28);
+            this.cmbBuscar.TabIndex = 11;
+            this.cmbBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbBuscar_SelectedIndexChanged);
             // 
             // gbxIngresoDatos
             // 
@@ -103,6 +145,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(357, 27);
             this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // txtNombre
             // 
@@ -110,6 +153,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(292, 27);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // lblDescripcion
             // 
@@ -199,6 +243,30 @@
             this.pnlInferior.Size = new System.Drawing.Size(1274, 54);
             this.pnlInferior.TabIndex = 4;
             // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(498, 15);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(56, 20);
+            this.lblFecha.TabIndex = 5;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.Location = new System.Drawing.Point(684, 15);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(47, 20);
+            this.lblHora.TabIndex = 4;
+            this.lblHora.Text = "Hora";
+            // 
             // pnlSuperior
             // 
             this.pnlSuperior.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -210,6 +278,20 @@
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(1274, 72);
             this.pnlSuperior.TabIndex = 3;
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
+            this.btnAyuda.Location = new System.Drawing.Point(1191, 0);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(83, 72);
+            this.btnAyuda.TabIndex = 2;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // pictureBox1
             // 
@@ -248,90 +330,10 @@
             this.cmsModificar.Text = "Actualizar";
             this.cmsModificar.Click += new System.EventHandler(this.cmsModificar_Click);
             // 
-            // btnAyuda
-            // 
-            this.btnAyuda.FlatAppearance.BorderSize = 0;
-            this.btnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btnAyuda.Image")));
-            this.btnAyuda.Location = new System.Drawing.Point(1191, 0);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(83, 72);
-            this.btnAyuda.TabIndex = 2;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(498, 15);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(56, 20);
-            this.lblFecha.TabIndex = 5;
-            this.lblFecha.Text = "Fecha";
-            // 
-            // lblHora
-            // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(684, 15);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(47, 20);
-            this.lblHora.TabIndex = 4;
-            this.lblHora.Text = "Hora";
-            // 
             // tmrHoraFecha
             // 
             this.tmrHoraFecha.Enabled = true;
             this.tmrHoraFecha.Tick += new System.EventHandler(this.tmrHoraFecha_Tick);
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefrescar.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefrescar.FlatAppearance.BorderSize = 0;
-            this.btnRefrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
-            this.btnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefrescar.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnRefrescar.Location = new System.Drawing.Point(391, 237);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(220, 34);
-            this.btnRefrescar.TabIndex = 13;
-            this.btnRefrescar.Text = "Refrescar";
-            this.btnRefrescar.UseVisualStyleBackColor = false;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Location = new System.Drawing.Point(730, 244);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(62, 20);
-            this.lblBuscar.TabIndex = 12;
-            this.lblBuscar.Text = "Buscar";
-            // 
-            // cmbBuscar
-            // 
-            this.cmbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBuscar.FormattingEnabled = true;
-            this.cmbBuscar.Location = new System.Drawing.Point(819, 241);
-            this.cmbBuscar.Name = "cmbBuscar";
-            this.cmbBuscar.Size = new System.Drawing.Size(401, 28);
-            this.cmbBuscar.TabIndex = 11;
-            this.cmbBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbBuscar_SelectedIndexChanged);
             // 
             // frmModulo
             // 

@@ -1,14 +1,8 @@
 ﻿using System;
 using CapaControlador.ControladoresReporteador;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaModelo.Clases_Reporteador;
+using System.Text.RegularExpressions;
 
 namespace CapaVista.Mantenimientos
 {
@@ -25,6 +19,13 @@ namespace CapaVista.Mantenimientos
             cargarDatos();
             CargarBusqueda();
             BloquearBotones();
+            ttMensaje.SetToolTip(this.txtDescripcion, "Ingrese la descripción del aplicativo");
+            ttMensaje.SetToolTip(this.txtNombre, "Ingrese el nombre del aplicativo");
+            ttMensaje.SetToolTip(this.cmbModulo, "Seleccione el módulo que corresponde al aplicativo");
+            ttMensaje.SetToolTip(this.btnAyuda, "Accede a una ventana que explica el funcionamiento del formulario");
+            ttMensaje.SetToolTip(this.btnGuardar, "Guarda los datos que ingresó");
+            ttMensaje.SetToolTip(this.btnModificar, "Guarda los cambios de datos previamente seleccionados que usted modificó");
+            ttMensaje.SetToolTip(this.btnRefrescar, "Actualiza las opciones de Datos a Buscar y Muestra todos los datos del Grid");
         }
 
         private void CargarCombobox()
@@ -83,10 +84,15 @@ namespace CapaVista.Mantenimientos
             this.aplicativo = llenarCampos();
             try
             {
-                controlAplicativo.insertarAplicativo(this.aplicativo);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (ValidarTextbox() == true)
+                {
+                    controlAplicativo.insertarAplicativo(this.aplicativo);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -111,10 +117,15 @@ namespace CapaVista.Mantenimientos
             this.aplicativo = ObtenerModificaciones();
             try
             {
-                controlAplicativo.modificarAplicativo(this.aplicativo);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Modificados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (ValidarTextbox() == true)
+                {
+                    controlAplicativo.modificarAplicativo(this.aplicativo);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Modificados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -216,6 +227,58 @@ namespace CapaVista.Mantenimientos
                 this.cmsEM.Show(this.dgvVistaDatos, e.Location);
                 cmsEM.Show(Cursor.Position);
             }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsLetter(cCaracter) && cCaracter != 8 && cCaracter != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsLetterOrDigit(cCaracter) && cCaracter != 8 && cCaracter != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool ValidarTextbox()
+        {
+
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Ingrese Nombre", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            else if (txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Ingrese Descripción", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            else if (!Regex.Match(txtNombre.Text, @"^[A-Za-z]+([\ A-Za-z]+)*$").Success)
+            {
+                MessageBox.Show("Datos del campo nombre invalido", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            if (txtNombre.Text == "" && txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Llene los campos", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LimpiarComponentes();
+                return false;
+            }
+            return true;
+
         }
 
         private void cmsModificar_Click(object sender, EventArgs e)

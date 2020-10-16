@@ -60,5 +60,12 @@ namespace CapaVista
                 e.Cancel = true;
             }
         }
+
+        private void btnAsigApp_Click(object sender, EventArgs e)
+        {
+            frmReporteApp repmod = new frmReporteApp();
+            //this.Dispose();
+            repmod.Show();
+        }
     }
 }
