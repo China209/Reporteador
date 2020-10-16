@@ -23,6 +23,11 @@ namespace CapaVista.Mantenimientos
             CargarCombobox();
             cargarDatos();
             LimpiarComponentes();
+            ttMensaje.SetToolTip(this.btnAyuda, "Accede a una ventana que explica el funcionamiento del formulario");
+            ttMensaje.SetToolTip(this.btnGuardar, "Guarda los datos que ingresó");
+            ttMensaje.SetToolTip(this.cmbModulo, "Seleccione Opciones de Módulo");
+            ttMensaje.SetToolTip(this.cmbReporte, "Seleccione Opciones de Reporte");
+            ttMensaje.SetToolTip(this.cmbAplicativo, "Seleccione Opciones de Aplicativo/Aplicación");
         }
 
         private void CargarCombobox()
@@ -66,10 +71,15 @@ namespace CapaVista.Mantenimientos
             this.modulo = llenarCampos();
             try
             {
-                controlModulo.insertarModulos(this.modulo);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (ValidarCombo() == true)
+                {
+                    controlModulo.insertarModulos(this.modulo);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -134,6 +144,36 @@ namespace CapaVista.Mantenimientos
             {
                 e.Cancel = true;
             }
+        }
+        private bool ValidarCombo()
+        {
+            if (cmbAplicativo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un Aplicación", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbAplicativo.SelectedIndex = -1;
+                cmbAplicativo.Focus();
+                return false;
+            }
+            if (cmbModulo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un Módulo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbModulo.SelectedIndex = -1;
+                cmbModulo.Focus();
+                return false;
+            }
+            if (cmbReporte.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un Reporte", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbReporte.SelectedIndex = -1;
+                cmbReporte.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudasReporteador/AyudasObjetoReporteador.chm", "AsignarAplicacion.html");
         }
 
         private void dgvVistaDatos_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)

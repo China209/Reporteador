@@ -29,6 +29,10 @@
 			<param name="Name" value="AsignarModulo">
 			<param name="Local" value="AsignarModulo.html">
 			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="AsignarAplicacion">
+			<param name="Local" value="AsignarAplicacion.html">
+			</OBJECT>
 	</UL>
 </UL>
 </BODY></HTML>

@@ -14,18 +14,18 @@ namespace CapaControlador.ControladoresReporteador
         clsSentencia sentencia = new clsSentencia();
         clsConexion conexion = new clsConexion();
         private string sRuta;
-        public string obtenerRuta(int iID)
+        public string obtenerRutaApp(int iID)
         {
             try
             {
-                string sComando = "SELECT ruta_reporte FROM REPORTE WHERE estado_reporte=1 AND pk_id_reporte="+iID;
+                string sComando = "select r.ruta_reporte from reporte r inner join reporte_aplicativo a on r.pk_id_reporte=a.fk_id_reporte where fk_id_aplicativo =" + iID;
                 OdbcCommand comando = new OdbcCommand(sComando, conexion.conexion());
                 OdbcDataReader registro = comando.ExecuteReader();
 
 
                 while (registro.Read())
                 {
-                    sRuta= registro["ruta_reporte"].ToString();
+                    sRuta = registro["ruta_reporte"].ToString();
                 }
                 return sRuta;
             }

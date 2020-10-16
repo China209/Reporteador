@@ -16,7 +16,6 @@ C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmModulo.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmReporteMod.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVista.frmMenuReporteador.resources
-C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\Prototipo_No_Funcional.MDI.frmAuxiliar.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVista.Reporteador_Navegador.frmReporteadorNavegador.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\bin\Debug\AxShockwaveFlashObjects.dll
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll

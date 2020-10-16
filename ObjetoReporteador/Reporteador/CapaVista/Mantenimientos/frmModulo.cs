@@ -20,7 +20,13 @@ namespace CapaVista.Mantenimientos
             cargarDatos();
             CargarCombobox();
             BloquearBotones();
-           
+            ttMensaje.SetToolTip(this.txtDescripcion, "Ingrese la descripción del módulo");
+            ttMensaje.SetToolTip(this.txtNombre, "Ingrese la descripción del módulo");
+            ttMensaje.SetToolTip(this.cmbBuscar, "Despliega las Opciones de Búsqueda de Campos");
+            ttMensaje.SetToolTip(this.btnAyuda, "Accede a una ventana que explica el funcionamiento del formulario");
+            ttMensaje.SetToolTip(this.btnGuardar, "Guarda los datos que ingresó");
+            ttMensaje.SetToolTip(this.btnModificar, "Guarda los cambios de datos previamente seleccionados que usted modificó");
+            ttMensaje.SetToolTip(this.btnRefrescar, "Actualiza las opciones de Datos a Buscar y Muestra todos los datos del Grid");
         }
 
         private void CargarCombobox()

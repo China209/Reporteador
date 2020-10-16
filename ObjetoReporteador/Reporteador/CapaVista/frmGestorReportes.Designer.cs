@@ -56,6 +56,7 @@
             this.cmsModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsMostrar = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -394,13 +395,13 @@
             this.cmsModificar,
             this.cmsMostrar});
             this.cmsEM.Name = "cmsEM";
-            this.cmsEM.Size = new System.Drawing.Size(211, 104);
+            this.cmsEM.Size = new System.Drawing.Size(206, 76);
             // 
             // cmsEliminar
             // 
             this.cmsEliminar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(210, 24);
+            this.cmsEliminar.Size = new System.Drawing.Size(205, 24);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.cmsEliminar_Click);
             // 
@@ -408,14 +409,14 @@
             // 
             this.cmsModificar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsModificar.Name = "cmsModificar";
-            this.cmsModificar.Size = new System.Drawing.Size(210, 24);
+            this.cmsModificar.Size = new System.Drawing.Size(205, 24);
             this.cmsModificar.Text = "Actualizar";
             this.cmsModificar.Click += new System.EventHandler(this.cmsModificar_Click);
             // 
             // cmsMostrar
             // 
             this.cmsMostrar.Name = "cmsMostrar";
-            this.cmsMostrar.Size = new System.Drawing.Size(210, 24);
+            this.cmsMostrar.Size = new System.Drawing.Size(205, 24);
             this.cmsMostrar.Text = "Mostrar Reporte";
             this.cmsMostrar.Click += new System.EventHandler(this.cmsMostrar_Click);
             // 
@@ -423,6 +424,11 @@
             // 
             this.tmrHoraFecha.Enabled = true;
             this.tmrHoraFecha.Tick += new System.EventHandler(this.tmrHoraFecha_Tick);
+            // 
+            // ttMensaje
+            // 
+            this.ttMensaje.IsBalloon = true;
+            this.ttMensaje.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // frmGestorReportes
             // 
@@ -483,5 +489,6 @@
         private System.Windows.Forms.Timer tmrHoraFecha;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.ToolStripMenuItem cmsMostrar;
+        private System.Windows.Forms.ToolTip ttMensaje;
     }
 }

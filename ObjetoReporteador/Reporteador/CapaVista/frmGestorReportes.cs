@@ -1,7 +1,6 @@
 ﻿using CapaControlador.ControladoresReporteador;
 using CapaModelo.Clases_Reporteador;
 using CapaVista.Reporteador_Navegador;
-using Prototipo_No_Funcional.MDI;
 using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -20,6 +19,16 @@ namespace CapaVista
             cargarDatos();
             BloquearBotones();
             CargarCombobox();
+            ttMensaje.SetToolTip(this.txtRuta, "Ingrese la ruta del aplicativo");
+            ttMensaje.SetToolTip(this.txtNombre, "Ingrese el nombre del aplicativo");
+            ttMensaje.SetToolTip(this.btnSeleccionar, "Despliga Ventana Emergente para seleccionar el Reporte");
+            ttMensaje.SetToolTip(this.cmbBuscar, "Despliega las Opciones de Búsqueda de Campos");
+            ttMensaje.SetToolTip(this.btnSalir, "Salir de la Ventana Actual");
+            ttMensaje.SetToolTip(this.btnVerReporte, "Muestra el reporte seleccionado del Grid de Datos");
+            ttMensaje.SetToolTip(this.btnAyuda, "Accede a una ventana que explica el funcionamiento del formulario");
+            ttMensaje.SetToolTip(this.btnGuardar, "Guarda los datos que ingresó");
+            ttMensaje.SetToolTip(this.btnModificar, "Guarda los cambios de datos previamente seleccionados que usted modificó");
+            ttMensaje.SetToolTip(this.btnRefrescar, "Actualiza las opciones de Datos a Buscar y Muestra todos los datos del Grid");
         }
 
         private void CargarCombobox()
@@ -259,7 +268,8 @@ namespace CapaVista
 
         private void btnVerReporte_Click(object sender, EventArgs e)
         {
-            frmReporteadorNavegador reporteadorNavegador = new frmReporteadorNavegador(iIDAux);
+            int iAux = controlReportes.obtenerIDApp(iIDAux);
+            frmReporteadorNavegador reporteadorNavegador = new frmReporteadorNavegador(iAux);
             reporteadorNavegador.Show();
             if (!reporteadorNavegador.IsDisposed)
             {
