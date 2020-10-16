@@ -49,6 +49,7 @@
             this.cmsEM = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.pnlCuerpo.SuspendLayout();
             this.pnlInferior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaDatos)).BeginInit();
@@ -251,6 +252,7 @@
             this.btnAyuda.Size = new System.Drawing.Size(92, 90);
             this.btnAyuda.TabIndex = 3;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // pictureBox1
             // 
@@ -276,7 +278,7 @@
             // 
             this.cmsEliminar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(210, 24);
+            this.cmsEliminar.Size = new System.Drawing.Size(145, 24);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.cmsEliminar_Click);
             // 
@@ -284,6 +286,11 @@
             // 
             this.tmrHoraFecha.Enabled = true;
             this.tmrHoraFecha.Tick += new System.EventHandler(this.tmrHoraFecha_Tick);
+            // 
+            // ttMensaje
+            // 
+            this.ttMensaje.IsBalloon = true;
+            this.ttMensaje.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // frmReporteApp
             // 
@@ -334,5 +341,6 @@
         private System.Windows.Forms.ContextMenuStrip cmsEM;
         private System.Windows.Forms.ToolStripMenuItem cmsEliminar;
         private System.Windows.Forms.Timer tmrHoraFecha;
+        private System.Windows.Forms.ToolTip ttMensaje;
     }
 }

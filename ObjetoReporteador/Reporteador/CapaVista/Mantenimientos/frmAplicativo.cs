@@ -22,6 +22,7 @@ namespace CapaVista.Mantenimientos
             ttMensaje.SetToolTip(this.txtDescripcion, "Ingrese la descripción del aplicativo");
             ttMensaje.SetToolTip(this.txtNombre, "Ingrese el nombre del aplicativo");
             ttMensaje.SetToolTip(this.cmbModulo, "Seleccione el módulo que corresponde al aplicativo");
+            ttMensaje.SetToolTip(this.cmbBuscar, "Despliega las Opciones de Búsqueda de Campos");
             ttMensaje.SetToolTip(this.btnAyuda, "Accede a una ventana que explica el funcionamiento del formulario");
             ttMensaje.SetToolTip(this.btnGuardar, "Guarda los datos que ingresó");
             ttMensaje.SetToolTip(this.btnModificar, "Guarda los cambios de datos previamente seleccionados que usted modificó");
@@ -249,7 +250,13 @@ namespace CapaVista.Mantenimientos
 
         private bool ValidarTextbox()
         {
-
+            if (cmbModulo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un Módulo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbModulo.SelectedIndex = -1;
+                cmbModulo.Focus();
+                return false;
+            }
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("Ingrese Nombre", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);

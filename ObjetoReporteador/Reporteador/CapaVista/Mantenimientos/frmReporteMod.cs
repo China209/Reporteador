@@ -17,8 +17,29 @@ namespace CapaVista.Mantenimientos
             CargarCombobox();
             cargarDatos();
             LimpiarComponentes();
+            ttMensaje.SetToolTip(this.btnAyuda, "Accede a una ventana que explica el funcionamiento del formulario");
+            ttMensaje.SetToolTip(this.btnGuardar, "Guarda los datos que ingresó");
+            ttMensaje.SetToolTip(this.cmbModulo, "Seleccione Opciones de Módulo");
+            ttMensaje.SetToolTip(this.cmbReporte, "Seleccione Opciones de Reporte");
         }
-
+        private bool ValidarCombo()
+        {
+            if (cmbModulo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un Módulo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbModulo.SelectedIndex = -1;
+                cmbModulo.Focus();
+                return false;
+            }
+            if (cmbReporte.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un Reporte", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbReporte.SelectedIndex = -1;
+                cmbReporte.Focus();
+                return false;
+            }
+            return true;
+        }
         private void CargarCombobox()
         {
             cmbModulo.DisplayMember = "nombre_modulo";
@@ -55,10 +76,15 @@ namespace CapaVista.Mantenimientos
             this.modulo = llenarCampos();
             try
             {
-                controlModulo.insertarModulos(this.modulo);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (ValidarCombo() == true)
+                {
+                    controlModulo.insertarModulos(this.modulo);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {

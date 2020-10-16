@@ -26,6 +26,13 @@ namespace CapaVista.Reporteador_Navegador
             {
                 MessageBox.Show("Error no existe la ruta", "");
             }
+            ttMensaje.SetToolTip(this.txtPageNumber, "Ingrese la página del reporte al cual desea dirigirse");
+            ttMensaje.SetToolTip(this.txtSearchText, "Ingrese el texto dentro del reporte que desea buscar");
+            ttMensaje.SetToolTip(this.txtZoomFactor, "Ingrese la cantidad de acercamiento");
+            ttMensaje.SetToolTip(this.btnGoToPage, "Se dirige a la página ingresada");
+            ttMensaje.SetToolTip(this.btnSearch, "Busca la palabra ingresada");
+            ttMensaje.SetToolTip(this.btnUpdateZoomFactor, "Realiza el acercamiento de acuerdo al dato ingresado");
+            ttMensaje.SetToolTip(this.btnRedisplay, "Despliega el Toolbar");
         }
 
         private void MostrarReporte(int iIDReport)
@@ -143,7 +150,7 @@ namespace CapaVista.Reporteador_Navegador
         {
             try
             {
-                string sRutaReporte=reporteador.obtenerRuta(iIDReport);
+                string sRutaReporte=reporteador.obtenerRutaApp(iIDReport);
                 return sRutaReporte;
             }
             catch (Exception ex)
@@ -151,6 +158,24 @@ namespace CapaVista.Reporteador_Navegador
                 Console.WriteLine(ex.Message);
                 MessageBox.Show("No se pudo encontrar la ruta del reporte", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return null;
+            }
+        }
+
+        private void txtPageNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsDigit(cCaracter) && cCaracter != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtZoomFactor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsDigit(cCaracter) && cCaracter != 8)
+            {
+                e.Handled = true;
             }
         }
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.crptReporteContenedor = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblSeleccionar = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.txtSearchText = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,6 +181,7 @@
             this.txtPageNumber.Name = "txtPageNumber";
             this.txtPageNumber.Size = new System.Drawing.Size(384, 31);
             this.txtPageNumber.TabIndex = 6;
+            this.txtPageNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPageNumber_KeyPress);
             // 
             // btnGoToPage
             // 
@@ -203,6 +206,7 @@
             this.txtZoomFactor.Name = "txtZoomFactor";
             this.txtZoomFactor.Size = new System.Drawing.Size(384, 31);
             this.txtZoomFactor.TabIndex = 8;
+            this.txtZoomFactor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtZoomFactor_KeyPress);
             // 
             // btnUpdateZoomFactor
             // 
@@ -255,6 +259,11 @@
             this.lblMessage.TabIndex = 12;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ttMensaje
+            // 
+            this.ttMensaje.IsBalloon = true;
+            this.ttMensaje.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // frmReporteadorNavegador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 22F);
@@ -294,5 +303,6 @@
         private System.Windows.Forms.TextBox txtSearchText;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.ToolTip ttMensaje;
     }
 }

@@ -13,6 +13,7 @@ namespace CapaControlador.ControladoresReporteador
 {
     public class clsControlReportes
     {
+        private int iIDAPP;
         clsSentencia sentencia=new clsSentencia();
         clsConexion conexion = new clsConexion();
         DataTable tabla;
@@ -107,6 +108,29 @@ namespace CapaControlador.ControladoresReporteador
                 MessageBox.Show("Error al obtener datos");
                 Console.WriteLine(ex.Message);
                 return null;
+            }
+        }
+
+        public int obtenerIDApp(int iID)
+        {
+            try
+            {
+                string sComando = "select fk_id_aplicativo from reporte_aplicativo where fk_id_reporte =" + iID;
+                OdbcCommand comando = new OdbcCommand(sComando, conexion.conexion());
+                OdbcDataReader registro = comando.ExecuteReader();
+
+
+                while (registro.Read())
+                {
+                    iIDAPP = int.Parse(registro["fk_id_aplicativo"].ToString());
+                }
+                return iIDAPP;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener datos");
+                Console.WriteLine(ex.Message);
+                return 0;
             }
         }
     }

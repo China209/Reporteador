@@ -53,12 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAuxiliar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAuxiliar.designer.cs">
-      <DependentUpon>frmAuxiliar.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGestorReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +103,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmAuxiliar.resx">
-      <DependentUpon>frmAuxiliar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGestorReportes.resx">
       <DependentUpon>frmGestorReportes.cs</DependentUpon>
     </EmbeddedResource>
