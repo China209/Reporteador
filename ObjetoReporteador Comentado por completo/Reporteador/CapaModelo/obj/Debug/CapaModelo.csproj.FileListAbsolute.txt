@@ -1,0 +1,36 @@
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\CapaModelo.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\CapaModelo.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.csprojAssemblyReference.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Data.v19.2.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Xpo.v19.2.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Data.v19.2.xml
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Xpo.v19.2.xml
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.csproj.CopyComplete
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\CapaModelo.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\CapaModelo.pdb
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Data.v19.2.xml
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Xpo.v19.2.xml
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.csprojAssemblyReference.cache
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.csproj.CopyComplete
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.dll
+C:\Users\Daniel\Desktop\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModelo.pdb
