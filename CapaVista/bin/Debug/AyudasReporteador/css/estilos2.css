@@ -1,0 +1,41 @@
+*
+{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFFFFF;
+}
+.container
+{
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+cuerpo 
+{
+  color: #000000;
+  text-align: center;
+  font-size: 45px;
+}
+h2
+{
+  color: #33cc33;
+  text-align: center;
+  font-size: 30px;
+}
+p
+{
+  font-size: 20px;
+  text-align: justify;
+  padding: 20px;
+}
+img
+{
+  width: 400px;
+  height: auto;
+  text-align: center;
+}
+.logo
+{
+  width: 300px;
+}
