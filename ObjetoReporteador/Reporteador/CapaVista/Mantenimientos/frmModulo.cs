@@ -1,13 +1,8 @@
-﻿using CapaControlador.ControladoresReporteador;
+﻿
+using CapaControlador.ControladoresReporteador;
 using CapaModelo.Clases_Reporteador;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace CapaVista.Mantenimientos
@@ -25,6 +20,7 @@ namespace CapaVista.Mantenimientos
             cargarDatos();
             CargarCombobox();
             BloquearBotones();
+           
         }
 
         private void CargarCombobox()
@@ -73,10 +69,15 @@ namespace CapaVista.Mantenimientos
             this.modulo = llenarCampos();
             try
             {
-                controlModulo.insertarModulos(this.modulo);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (ValidarTextbox() == true)
+                {
+                    controlModulo.insertarModulos(this.modulo);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -102,10 +103,15 @@ namespace CapaVista.Mantenimientos
             this.modulo = ObtenerModificaciones();
             try
             {
-                controlModulo.modificarModulos(this.modulo);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Modificados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (ValidarTextbox() == true)
+                {
+                    controlModulo.modificarModulos(this.modulo);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Modificados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -200,6 +206,57 @@ namespace CapaVista.Mantenimientos
             else if (cmbBuscar.SelectedIndex < 0)
             {
                 cargarDatos();
+            }
+        }
+        private bool ValidarTextbox()
+        {
+
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Ingrese Nombre", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            else if (txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Ingrese Descripción", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            else if (!Regex.Match(txtNombre.Text, @"^[A-Za-z]+([\ A-Za-z]+)*$").Success)
+            {
+                MessageBox.Show("Datos del campo nombre invalido", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            if (txtNombre.Text == "" && txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Llene los campos", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LimpiarComponentes();
+                return false;
+            }
+            return true;
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsLetter(cCaracter) && cCaracter != 8 && cCaracter != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsLetterOrDigit(cCaracter) && cCaracter != 8 && cCaracter != 32)
+            {
+                e.Handled = true;
             }
         }
 

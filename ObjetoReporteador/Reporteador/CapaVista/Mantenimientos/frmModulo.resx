@@ -118,6 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAyuda.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMcSURBVFhHtZdJ
+        axRREID7ku7O5kEFCQqiiSc9uPwFRTx4ERL0IP4BPerdgOjFk0IWD+pdyE0IKLNkMksQzGKUGBQzMpKJ
+        iSHLmEwvU1a9funJdFfPdM+Ygo/p6apXVf1everXSliBlNINcfUWxLUXkNCnIKGtIIYEr/UcJLVRSKo3
+        yVYOa10g2dGDAYaQEgIhKYlEY1qfdBNdIK20Q1wfRGfbHudRwNnRn8BbRZNuwwlljoNnPc5aQJ2Ed53H
+        pPv6ArG28zio6HfSMnmIqedkGF7kkzcMXsn2gb34AKzCS4G9eB8qmV7W1sNS4ExATNHR4KNngId2sL4P
+        glHeBsMwasF71reHwoYfu4eaZmtCFhwzoIqVf+4P7MHKP2PH1qI/lmEdkVutbrVXpq9WA+2sgr1wFyBz
+        UmAv3MN7a66+Mn2F9bGPMrzXemV4TMDZ55yhi1UcqwaYve7TV2auoa4s9NbyG5/eBzYtJ3hWOYQ3GjYZ
+        o/RLODc3Zlg9YW7MOUmWCqzewzbWXReuPbZX3qAGmnbxdIVXrJ4wV8adBHb+sHo/6gAmQL2dU9Ziz94A
+        6+cobsEzrJ62obG76czSWpK1YRjB9RcvFk4ZntQRDJpynh6xP9/h7XyoGSrA335FeCrTl8Hc+uoGN9cm
+        sMA6WFuGIiVQ9twMjT1/G4M6lS+Cb34BSB9nbQPYbT6B1GEw/i67wa3Ca4DJHt42GJFAU0tAU+8G//GU
+        tQkBLUFzRWjP9bsJ0DVn0xgqQjpGscoGpE9g4/kkmk/Edd/PMCaAZzheefDE1X56DXfhny2f8uBxWrF4
+        H4Tshl7MqUtg5i6yuhCMiOAk8iREx2vOkIUCr66vC5pIYheL/5QM74g4vfLGLPsTsHIXWJtAkvojGbYq
+        8EFpQ2XCZ1wHSiL60+MJOeiYTgdGNMr7B/03gg+le0JHZzQ8iCSWIKWelWHqC8S6j+KAuMdBC0T4MNkT
+        Wic6vaKDpt+WSJkKDuYVVbqNLjChn5btOso3IjW2Ed9Wa0WcjqkOoONh/M3iL31B0ewQeC3uDVF7hXGl
+        Uw5rIIryDxzbZRyGWgAFAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAagAAADGCAYAAACHOxReAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
@@ -476,26 +496,6 @@
   <metadata name="cmsEM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="btnAyuda.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALEAAACxAcYtSY0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAADHElEQVRYR7WXSWsUURCA+5LuzuZBBQkKooknPbj8BUU8eBES9CD+AT3q3YDoxZNCFg/qXchNCCiz
-        ZDJLEMxilBgUMzKSiYkhy5hML1NWvX7pyXRXz3TPmIKP6emqV1X9Xr3q10pYgZTSDXH1FsS1F5DQpyCh
-        rSCGBK/1HCS1UUiqN8lWDmtdINnRgwGGkBICISmJRGNan3QTXSCttENcH0Rn2x7nUcDZ0Z/AW0WTbsMJ
-        ZY6DZz3OWkCdhHedx6T7+gKxtvM4qOh30jJ5iKnnZBhe5JM3DF7J9oG9+ACswkuBvXgfKple1tbDUuBM
-        QEzR0eCjZ4CHdrC+D4JR3gbDMGrBe9a3h8KGH7uHmmZrQhYcM6CKlX/uD+zByj9jx9aiP5ZhHZFbrW61
-        V6avVgPtrIK9cBcgc1JgL9zDe2uuvjJ9hfWxjzK813pleEzA2eecoYtVHKsGmL3u01dmrqGuLPTW8huf
-        3gc2LSd4VjmENxo2GaP0Szg3N2ZYPWFuzDlJlgqs3sM21l0Xrj22V96gBpp28XSFV6yeMFfGnQR2/rB6
-        P+oAJkC9nVPWYs/eAOvnKG7BM6yetqGxu+nM0lqStWEYwfUXLxZOGZ7UEQyacp4esT/f4e18qBkqwN9+
-        RXgq05fB3PrqBjfXJrDAOlhbhiIlUPbcDI09fxuDOpUvgm9+AUgfZ20D2G0+gdRhMP4uu8GtwmuAyR7e
-        NhiRQFNLQFPvBv/xlLUJAS1Bc0Voz/W7CdA1Z9MYKkI6RrHKBqRPYOP5JJpPxHXfzzAmgGc4XnnwxNV+
-        eg134Z8tn/LgcVqxeB+E7IZezKlLYOYusroQjIjgJPIkRMdrzpCFAq+urwuaSGIXi/+UDO+IOL3yxiz7
-        E7ByF1ibQJL6Ixm2KvBBaUNlwmdcB0oi+tPjCTnomE4HRjTK+wf9N4IPpXtCR2c0PIgkliClnpVh6gvE
-        uo/igLjHQQtE+DDZE1onOr2ig6bflkiZCg7mFVW6jS4woZ+W7TrKNyI1thHfVmtFnI6pDqDjYfzN4i99
-        QdHsEHgt7g1Re4VxpVMOayCK8g8c22UchloABQAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="tmrHoraFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>170, 17</value>
   </metadata>

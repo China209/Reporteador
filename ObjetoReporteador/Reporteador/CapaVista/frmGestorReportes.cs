@@ -1,14 +1,9 @@
 ﻿using CapaControlador.ControladoresReporteador;
 using CapaModelo.Clases_Reporteador;
+using CapaVista.Reporteador_Navegador;
 using Prototipo_No_Funcional.MDI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace CapaVista
@@ -43,6 +38,7 @@ namespace CapaVista
         private void BloquearBotones()
         {
             btnModificar.Enabled = false;
+            btnVerReporte.Enabled = false;
             btnGuardar.Enabled = true;
         }
         private clsReporte llenarCampos()
@@ -75,10 +71,15 @@ namespace CapaVista
             this.reportes = llenarCampos();
             try
             {
-                controlReportes.insertarReportes(this.reportes);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (ValidarTextbox() == true)
+                {
+                    controlReportes.insertarReportes(this.reportes);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -121,10 +122,15 @@ namespace CapaVista
             this.reportes = ObtenerModificaciones();
             try
             {
-                controlReportes.modificarReportes(this.reportes);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Modificados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (ValidarTextbox() == true)
+                {
+                    controlReportes.modificarReportes(this.reportes);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Modificados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                else
+                    return false;
             }
             catch (Exception ex)
             {
@@ -181,6 +187,39 @@ namespace CapaVista
             }
         }
 
+        private bool ValidarTextbox()
+        {
+
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Ingrese Nombre", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            else if (txtRuta.Text == "")
+            {
+                MessageBox.Show("Ingrese Ruta", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            else if (!Regex.Match(txtNombre.Text, @"^[A-Za-z]+([\ A-Za-z]+)*$").Success)
+            {
+                MessageBox.Show("Datos del campo nombre invalido", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Text = "";
+                txtNombre.Focus();
+                return false;
+            }
+            if (txtNombre.Text == "" && txtRuta.Text == "")
+            {
+                MessageBox.Show("Llene los campos", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LimpiarComponentes();
+                return false;
+            }
+            return true;
+
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             DialogResult drResultadoMensaje;
@@ -220,8 +259,26 @@ namespace CapaVista
 
         private void btnVerReporte_Click(object sender, EventArgs e)
         {
-            frmAuxiliar auxiliar = new frmAuxiliar();
-            auxiliar.Show();
+            frmReporteadorNavegador reporteadorNavegador = new frmReporteadorNavegador(iIDAux);
+            reporteadorNavegador.Show();
+            if (!reporteadorNavegador.IsDisposed)
+            {
+                BloquearBotones();
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsLetter(cCaracter) && cCaracter != 8 && cCaracter != 32)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cmsMostrar_Click(object sender, EventArgs e)
+        {
+            btnVerReporte.Enabled = true;
         }
 
         private void cmsEliminar_Click(object sender, EventArgs e)

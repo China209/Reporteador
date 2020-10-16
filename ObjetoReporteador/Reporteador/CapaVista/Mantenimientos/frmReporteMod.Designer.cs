@@ -238,13 +238,13 @@
             this.cmsEM.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsEliminar});
             this.cmsEM.Name = "cmsEM";
-            this.cmsEM.Size = new System.Drawing.Size(146, 28);
+            this.cmsEM.Size = new System.Drawing.Size(211, 56);
             // 
             // cmsEliminar
             // 
             this.cmsEliminar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(145, 24);
+            this.cmsEliminar.Size = new System.Drawing.Size(210, 24);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.cmsEliminar_Click);
             // 
