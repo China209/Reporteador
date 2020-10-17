@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 // Metodo para enviar y obtener los datos de la bd desde la tabla modulo 
 
-namespace CapaModelo.Clases_Reporteador
+namespace CapaModeloReporteador.Clases_Reporteador
 {
     public class clsModulo
     {

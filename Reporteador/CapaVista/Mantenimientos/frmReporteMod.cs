@@ -1,9 +1,9 @@
-﻿using CapaControlador.ControladoresReporteador;
-using CapaModelo.Clases_Reporteador;
+﻿using CapaControladorReporteador.ControladoresReporteador;
+using CapaModeloReporteador.Clases_Reporteador;
 using System;
 using System.Windows.Forms;
 
-namespace CapaVista.Mantenimientos
+namespace CapaVistaReporteador.Mantenimientos
 {
     public partial class frmReporteMod : Form
     {

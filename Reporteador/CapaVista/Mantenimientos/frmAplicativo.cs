@@ -1,10 +1,10 @@
 ﻿using System;
-using CapaControlador.ControladoresReporteador;
 using System.Windows.Forms;
-using CapaModelo.Clases_Reporteador;
 using System.Text.RegularExpressions;
+using CapaModeloReporteador.Clases_Reporteador;
+using CapaControladorReporteador.ControladoresReporteador;
 
-namespace CapaVista.Mantenimientos
+namespace CapaVistaReporteador.Mantenimientos
 {
     public partial class frmAplicativo : Form
     {

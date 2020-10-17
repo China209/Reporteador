@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 
 // METODOS PARA LA CONEXION A LA BASE DE DATOS 
-namespace CapaModelo
+namespace CapaModeloReporteador
 {
     public class clsConexion
     {

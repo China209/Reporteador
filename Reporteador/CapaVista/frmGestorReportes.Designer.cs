@@ -1,4 +1,4 @@
-﻿namespace CapaVista
+﻿namespace CapaVistaReporteador
 {
     partial class frmGestorReportes
     {

@@ -1,5 +1,5 @@
-﻿using CapaControlador.ControladoresReporteador;
-using CapaModelo.Clases_Reporteador;
+﻿using CapaControladorReporteador.ControladoresReporteador;
+using CapaModeloReporteador.Clases_Reporteador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVista.Mantenimientos
+namespace CapaVistaReporteador.Mantenimientos
 {
     public partial class frmReporteApp : Form
     {

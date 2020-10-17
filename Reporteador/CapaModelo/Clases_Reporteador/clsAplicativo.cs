@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 // metodo para retornar datos del aplicativo y asi obtenerlos y enviar los datos a la BD
-namespace CapaModelo.Clases_Reporteador
+namespace CapaModeloReporteador.Clases_Reporteador
 {
     public class clsAplicativo
     {

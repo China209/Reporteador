@@ -1,4 +1,4 @@
-﻿namespace CapaVista.Mantenimientos
+﻿namespace CapaVistaReporteador.Mantenimientos
 {
     partial class frmAplicativo
     {
