@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaModelo.Reporteador_Nav
+namespace CapaModeloReporteador.Reporteador_Nav
 {
     public enum clsCeWinCRVReportOptions
     {

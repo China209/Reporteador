@@ -1,5 +1,5 @@
-﻿using CapaModelo;
-using CapaModelo.Clases_Reporteador;
+﻿using CapaModeloReporteador;
+using CapaModeloReporteador.Clases_Reporteador;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaControlador.ControladoresReporteador
+namespace CapaControladorReporteador.ControladoresReporteador
 {
     public class clsControlAsignacionAplicativo
     {

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 
 // Clase para ejecutar el query de las consultas 
-namespace CapaModelo
+namespace CapaModeloReporteador
 {
     public class clsSentencia
     {

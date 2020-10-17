@@ -1,4 +1,5 @@
-﻿using CapaVista.Mantenimientos;
+﻿using CapaVistaReporteador;
+using CapaVistaReporteador.Mantenimientos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

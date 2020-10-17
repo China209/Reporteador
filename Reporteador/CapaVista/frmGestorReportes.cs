@@ -1,12 +1,11 @@
-﻿using CapaControlador.ControladoresReporteador;
-using CapaModelo.Clases_Reporteador;
+﻿using CapaControladorReporteador.ControladoresReporteador;
+using CapaModeloReporteador.Clases_Reporteador;
 using CapaVista.Reporteador_Navegador;
-using Prototipo_No_Funcional.MDI;
 using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace CapaVista
+namespace CapaVistaReporteador
 {
     public partial class frmGestorReportes : Form
     {

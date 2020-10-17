@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 // Metodo para obtener y recibir datos de de la tabla reporte aplicativo 
-namespace CapaModelo.Clases_Reporteador
+namespace CapaModeloReporteador.Clases_Reporteador
 {
     public class clsReporteAplicativo
     {

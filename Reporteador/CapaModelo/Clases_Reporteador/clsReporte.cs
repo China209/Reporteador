@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 // Metodo para enviar y obtener los datos desde la tabla reporteador 
 
-namespace CapaModelo.Clases_Reporteador
+namespace CapaModeloReporteador.Clases_Reporteador
 {
     public class clsReporte
     {

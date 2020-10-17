@@ -1,5 +1,5 @@
-﻿using CapaControlador.ControladoresReporteador;
-using CapaModelo.Reporteador_Nav;
+﻿using CapaControladorReporteador.ControladoresReporteador;
+using CapaModeloReporteador.Reporteador_Nav;
 using CrystalDecisions.CrystalReports.Engine;
 using System;
 using System.Drawing;
@@ -37,7 +37,8 @@ namespace CapaVista.Reporteador_Navegador
         {
             try
             {
-                string sRuta = buscarID(iIDReport);
+                int iID = reporteador.obtenerIDApp(iIDReport);
+                string sRuta = buscarID(iID);
                 rdocReporte = new ReportDocument();
                 rdocReporte.Load(sRuta);
                 crptReporteContenedor.ReportSource = rdocReporte;

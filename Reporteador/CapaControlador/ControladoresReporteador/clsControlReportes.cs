@@ -1,6 +1,4 @@
-﻿using CapaModelo;
-using CapaModelo.Clases_Reporteador;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +6,10 @@ using System.Threading.Tasks;
 using System.Data.Odbc;
 using System.Windows.Forms;
 using System.Data;
+using CapaModeloReporteador;
+using CapaModeloReporteador.Clases_Reporteador;
 
-namespace CapaControlador.ControladoresReporteador
+namespace CapaControladorReporteador.ControladoresReporteador
 {
     public class clsControlReportes
     {
