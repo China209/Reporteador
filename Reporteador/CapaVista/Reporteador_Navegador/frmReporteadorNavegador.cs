@@ -49,6 +49,15 @@ namespace CapaVista.Reporteador_Navegador
 
                 Console.WriteLine(ex.Message);
                 MessageBox.Show("Path de ruta inválido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPageNumber.Enabled = false;
+                txtSearchText.Enabled = false;
+                txtZoomFactor.Enabled = false;
+                btnGoToPage.Enabled = false;
+                btnRedisplay.Enabled = false;
+                btnSearch.Enabled = false;
+                btnUpdateZoomFactor.Enabled = false;
+                lbxListCRVReport.Enabled = false;
+                cmbSelectBackColor.Enabled = false;
             }
         }
 

@@ -44,9 +44,9 @@ namespace CapaVistaReporteador.Mantenimientos
         // cargar la busqueda 
         private void CargarBusqueda()
         {
-            cmbBuscar.DisplayMember = "nombre_aplicativo";
-            cmbBuscar.ValueMember = "pk_id_aplicativo";
-            cmbBuscar.DataSource = controlAplicativo.obtenerCamposCombobox("pk_id_aplicativo","nombre_aplicativo","APLICATIVO","estado_aplicativo");
+            cmbBuscar.DisplayMember = "nombre_aplicacion";
+            cmbBuscar.ValueMember = "pk_id_aplicacion";
+            cmbBuscar.DataSource = controlAplicativo.obtenerCamposCombobox("pk_id_aplicacion","nombre_aplicacion","APLICACION","estado_aplicacion");
             cmbBuscar.SelectedIndex = -1;
             cmbBuscar.Refresh();
         }
@@ -248,9 +248,9 @@ namespace CapaVistaReporteador.Mantenimientos
         {
             if (e.Button == MouseButtons.Right)
             {
-                iIDAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["pk_id_aplicativo"].Value.ToString());
-                sNombreAux = dgvVistaDatos.Rows[e.RowIndex].Cells["nombre_aplicativo"].Value.ToString();
-                sDescAux = dgvVistaDatos.Rows[e.RowIndex].Cells["descripcion_aplicativo"].Value.ToString();
+                iIDAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["pk_id_aplicacion"].Value.ToString());
+                sNombreAux = dgvVistaDatos.Rows[e.RowIndex].Cells["nombre_aplicacion"].Value.ToString();
+                sDescAux = dgvVistaDatos.Rows[e.RowIndex].Cells["descripcion_aplicacion"].Value.ToString();
                 iIDModAux=int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_modulo"].Value.ToString());
                 this.cmsEM.Show(this.dgvVistaDatos, e.Location);
                 cmsEM.Show(Cursor.Position);
