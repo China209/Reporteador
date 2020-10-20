@@ -24,7 +24,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = string.Format("INSERT INTO APLICATIVO(fk_id_modulo, nombre_aplicativo, descripcion_aplicativo, estado_aplicativo) VALUES ({0},'{1}','{2}',{3});", aplicativo.IModulo, aplicativo.SNombre, aplicativo.SDescripcion,aplicativo.IEstado);
+                string sComando = string.Format("INSERT INTO APLICACION(fk_id_modulo, nombre_aplicacion, descripcion_aplicacion, estado_aplicacion) VALUES ({0},'{1}','{2}',{3});", aplicativo.IModulo, aplicativo.SNombre, aplicativo.SDescripcion,aplicativo.IEstado);
                 this.sentencia.ejecutarQuery(sComando);
             }
             catch (Exception ex)
@@ -40,7 +40,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = string.Format("UPDATE APLICATIVO SET fk_id_modulo={1}, nombre_aplicativo='{2}', descripcion_aplicativo='{3}' WHERE pk_id_aplicativo={0};", aplicativo.IIdAplicativo, aplicativo.IModulo, aplicativo.SNombre, aplicativo.SDescripcion);
+                string sComando = string.Format("UPDATE APLICACION SET fk_id_modulo={1}, nombre_aplicacion='{2}', descripcion_aplicacion='{3}' WHERE pk_id_aplicacion={0};", aplicativo.IIdAplicativo, aplicativo.IModulo, aplicativo.SNombre, aplicativo.SDescripcion);
                 this.sentencia.ejecutarQuery(sComando);
             }
             catch (Exception ex)
@@ -55,7 +55,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = string.Format("UPDATE APLICATIVO SET estado_aplicativo=0 WHERE pk_id_aplicativo={0};", iIDApp.ToString());
+                string sComando = string.Format("UPDATE APLICATIVO SET estado_aplicacion=0 WHERE pk_id_aplicacion={0};", iIDApp.ToString());
                 this.sentencia.ejecutarQuery(sComando);
             }
             catch (Exception ex)
@@ -71,7 +71,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
             
             try
             {
-                string sComando = string.Format("SELECT pk_id_aplicativo, fk_id_modulo, nombre_aplicativo, descripcion_aplicativo FROM APLICATIVO WHERE estado_aplicativo=1");
+                string sComando = string.Format("SELECT  pk_id_aplicacion, fk_id_modulo, nombre_aplicacion, descripcion_aplicacion FROM APLICACION WHERE estado_aplicacion=1");
                 datos = new OdbcDataAdapter(sComando, conexion.conexion());
                 tabla = new DataTable();
                 datos.Fill(tabla);
@@ -109,7 +109,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = string.Format("SELECT pk_id_aplicativo, fk_id_modulo, nombre_aplicativo, descripcion_aplicativo FROM APLICATIVO WHERE estado_aplicativo=1 AND pk_id_aplicativo={0};", iIDModulo.ToString());
+                string sComando = string.Format("SELECT pk_id_aplicacion, fk_id_modulo, nombre_aplicacion, descripcion_aplicacion FROM APLICACION WHERE estado_aplicacion=1 AND pk_id_aplicacion={0};", iIDModulo.ToString());
                 datos = new OdbcDataAdapter(sComando, conexion.conexion());
                 tabla = new DataTable();
                 datos.Fill(tabla);

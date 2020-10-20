@@ -37,9 +37,9 @@ namespace CapaVistaReporteador.Mantenimientos
             cmbReporte.DisplayMember = "nombre_reporte";
             cmbReporte.ValueMember = "pk_id_reporte";
             cmbReporte.DataSource = controlModulo.obtenerCamposCombobox("pk_id_reporte", "nombre_reporte", "REPORTE", "estado_reporte");
-            cmbAplicativo.DisplayMember = "nombre_aplicativo";
-            cmbAplicativo.ValueMember = "pk_id_aplicativo";
-            cmbAplicativo.DataSource = controlModulo.obtenerCamposCombobox("pk_id_aplicativo", "nombre_aplicativo", "APLICATIVO", "estado_aplicativo");
+            cmbAplicativo.DisplayMember = "nombre_aplicacion";
+            cmbAplicativo.ValueMember = "pk_id_aplicacion";
+            cmbAplicativo.DataSource = controlModulo.obtenerCamposCombobox("pk_id_aplicacion", "nombre_aplicacion", "APLICACION", "estado_aplicacion");
             cmbAplicativo.SelectedIndex = -1;
             cmbReporte.SelectedIndex = -1;
             cmbModulo.SelectedIndex = -1;
@@ -154,7 +154,7 @@ namespace CapaVistaReporteador.Mantenimientos
         {
             if (e.Button == MouseButtons.Right)
             {
-                iIDAppAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_aplicativo"].Value.ToString());
+                iIDAppAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_aplicacion"].Value.ToString());
                 iIDRepAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_reporte"].Value.ToString());
                 this.cmsEM.Show(this.dgvVistaDatos, e.Location);
                 cmsEM.Show(Cursor.Position);

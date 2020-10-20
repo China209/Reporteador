@@ -24,7 +24,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = string.Format("INSERT INTO REPORTE_APLICATIVO(fk_id_reporte, fk_id_aplicativo, fk_id_modulo, estado_reporte_aplicativo) VALUES ({0},{1},{2},{3});", modulo.IReporte, modulo.IAplicativo, modulo.IModulo, modulo.IEstado);
+                string sComando = string.Format("INSERT INTO REPORTE_APLICATIVO(fk_id_reporte, fk_id_aplicacion, fk_id_modulo, estado_reporte_aplicativo) VALUES ({0},{1},{2},{3});", modulo.IReporte, modulo.IAplicativo, modulo.IModulo, modulo.IEstado);
                 this.sentencia.ejecutarQuery(sComando);
             }
             catch (Exception ex)
@@ -39,7 +39,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = string.Format("UPDATE REPORTE_APLICATIVO SET fk_id_reporte='{1}', fk_id_modulo='{2}' WHERE fk_id_aplicativo={0};", modulo.IAplicativo, modulo.IReporte,modulo.IModulo);
+                string sComando = string.Format("UPDATE REPORTE_APLICATIVO SET fk_id_reporte='{1}', fk_id_modulo='{2}' WHERE fk_id_aplicacion={0};", modulo.IAplicativo, modulo.IReporte,modulo.IModulo);
                 this.sentencia.ejecutarQuery(sComando);
             }
             catch (Exception ex)
@@ -54,7 +54,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = string.Format("UPDATE REPORTE_APLICATIVO SET estado_reporte_aplicativo=0 WHERE fk_id_aplicativo={0} AND fk_id_reporte={1};", iIDModulo.ToString(), iIDReporte.ToString());
+                string sComando = string.Format("UPDATE REPORTE_APLICATIVO SET estado_reporte_aplicativo=0 WHERE fk_id_aplicacion={0} AND fk_id_reporte={1};", iIDModulo.ToString(), iIDReporte.ToString());
                 this.sentencia.ejecutarQuery(sComando);
             }
             catch (Exception ex)
@@ -69,7 +69,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = string.Format("SELECT fk_id_reporte, fk_id_aplicativo, fk_id_modulo FROM REPORTE_APLICATIVO WHERE estado_reporte_aplicativo=1");
+                string sComando = string.Format("SELECT fk_id_reporte, fk_id_aplicacion, fk_id_modulo FROM REPORTE_APLICATIVO WHERE estado_reporte_aplicativo=1");
                 datos = new OdbcDataAdapter(sComando, conexion.conexion());
                 tabla = new DataTable();
                 datos.Fill(tabla);

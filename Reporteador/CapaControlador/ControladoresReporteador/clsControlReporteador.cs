@@ -43,7 +43,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         {
             try
             {
-                string sComando = "select fk_id_reporte from reporte_aplicativo where fk_id_aplicativo =" + iID;
+                string sComando = "select fk_id_reporte from reporte_aplicativo where fk_id_aplicacion =" + iID;
                 OdbcCommand comando = new OdbcCommand(sComando, conexion.conexion());
                 OdbcDataReader registro = comando.ExecuteReader();
 
