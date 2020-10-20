@@ -180,6 +180,7 @@
             this.txtPageNumber.Name = "txtPageNumber";
             this.txtPageNumber.Size = new System.Drawing.Size(336, 31);
             this.txtPageNumber.TabIndex = 6;
+            this.txtPageNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPageNumber_KeyPress);
             // 
             // btnGoToPage
             // 
@@ -204,6 +205,7 @@
             this.txtZoomFactor.Name = "txtZoomFactor";
             this.txtZoomFactor.Size = new System.Drawing.Size(336, 31);
             this.txtZoomFactor.TabIndex = 8;
+            this.txtZoomFactor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtZoomFactor_KeyPress);
             // 
             // btnUpdateZoomFactor
             // 

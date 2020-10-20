@@ -160,5 +160,23 @@ namespace CapaVista.Reporteador_Navegador
                 return null;
             }
         }
+
+        private void txtPageNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsDigit(cCaracter) && cCaracter != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtZoomFactor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cCaracter = e.KeyChar;
+            if (!char.IsDigit(cCaracter) && cCaracter != 8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
