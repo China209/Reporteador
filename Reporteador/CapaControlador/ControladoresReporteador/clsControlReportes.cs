@@ -17,6 +17,7 @@ namespace CapaControladorReporteador.ControladoresReporteador
         clsConexion conexion = new clsConexion(); // instanciar la clase conexion 
         DataTable tabla; // variable tipo datatable
         OdbcDataAdapter datos; // variable tipo OdbcDataAdapter
+        private int iIDRuta;//Toma valor de ID reporte
 
         // Metodo para insertar datos en reporte 
         public void insertarReportes(clsReporte reporte)
@@ -117,6 +118,28 @@ namespace CapaControladorReporteador.ControladoresReporteador
                 MessageBox.Show("Error al obtener datos");
                 Console.WriteLine(ex.Message);
                 return null;
+            }
+        }
+        public int obtenerIDApp(int iID)
+        {
+            try
+            {
+                string sComando = "select fk_id_aplicacion from reporte_aplicativo where fk_id_reporte =" + iID+ " AND estado_reporte_aplicativo=1";
+                OdbcCommand comando = new OdbcCommand(sComando, conexion.conexion());
+                OdbcDataReader registro = comando.ExecuteReader();
+
+
+                while (registro.Read())
+                {
+                    iIDRuta = int.Parse(registro["fk_id_aplicacion"].ToString());
+                }
+                return iIDRuta;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener datos");
+                Console.WriteLine(ex.Message);
+                return 0;
             }
         }
     }

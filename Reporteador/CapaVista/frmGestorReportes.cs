@@ -1,6 +1,6 @@
 ﻿using CapaControladorReporteador.ControladoresReporteador;
 using CapaModeloReporteador.Clases_Reporteador;
-using CapaVista.Reporteador_Navegador;
+using CapaVistaReporteador.Reporteador_Navegador;
 using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -11,7 +11,7 @@ namespace CapaVistaReporteador
     {
         private clsReporte reportes;
         private string sRutaArchivo,sNombreAux,sRutaAux;
-        private int iIDAux;
+        private int iIDAux,iIDApp;
         private clsControlReportes controlReportes = new clsControlReportes();
 
         // metodos para manejar los datos 
@@ -283,7 +283,8 @@ namespace CapaVistaReporteador
         // metodo para visualizar el reporte 
         private void btnVerReporte_Click(object sender, EventArgs e)
         {
-            frmReporteadorNavegador reporteadorNavegador = new frmReporteadorNavegador(iIDAux);
+            iIDApp = controlReportes.obtenerIDApp(iIDAux);
+            frmReporteadorNavegador reporteadorNavegador = new frmReporteadorNavegador(iIDApp);
             reporteadorNavegador.Show();
             if (!reporteadorNavegador.IsDisposed)
             {
