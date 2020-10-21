@@ -87,33 +87,33 @@
             // 
             // lblFecha
             // 
-            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Location = new System.Drawing.Point(287, 29);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(46, 17);
+            this.lblFecha.Size = new System.Drawing.Size(56, 20);
             this.lblFecha.TabIndex = 8;
             this.lblFecha.Text = "Fecha";
             // 
             // lblHora
             // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
             this.lblHora.Location = new System.Drawing.Point(473, 29);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(39, 17);
+            this.lblHora.Size = new System.Drawing.Size(47, 20);
             this.lblHora.TabIndex = 7;
             this.lblHora.Text = "Hora";
             // 
             // dgvVistaDatos
             // 
             this.dgvVistaDatos.AllowUserToAddRows = false;
-            this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaDatos.BackgroundColor = System.Drawing.Color.White;
@@ -153,7 +153,7 @@
             this.cmbAplicativo.Location = new System.Drawing.Point(182, 135);
             this.cmbAplicativo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cmbAplicativo.Name = "cmbAplicativo";
-            this.cmbAplicativo.Size = new System.Drawing.Size(348, 25);
+            this.cmbAplicativo.Size = new System.Drawing.Size(348, 28);
             this.cmbAplicativo.TabIndex = 6;
             // 
             // lblAplicativo
@@ -162,7 +162,7 @@
             this.lblAplicativo.Location = new System.Drawing.Point(36, 135);
             this.lblAplicativo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAplicativo.Name = "lblAplicativo";
-            this.lblAplicativo.Size = new System.Drawing.Size(73, 17);
+            this.lblAplicativo.Size = new System.Drawing.Size(88, 20);
             this.lblAplicativo.TabIndex = 5;
             this.lblAplicativo.Text = "Aplicativo";
             // 
@@ -193,7 +193,7 @@
             this.cmbModulo.Location = new System.Drawing.Point(182, 85);
             this.cmbModulo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cmbModulo.Name = "cmbModulo";
-            this.cmbModulo.Size = new System.Drawing.Size(348, 25);
+            this.cmbModulo.Size = new System.Drawing.Size(348, 28);
             this.cmbModulo.TabIndex = 3;
             // 
             // cmbReporte
@@ -203,7 +203,7 @@
             this.cmbReporte.Location = new System.Drawing.Point(182, 42);
             this.cmbReporte.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cmbReporte.Name = "cmbReporte";
-            this.cmbReporte.Size = new System.Drawing.Size(348, 25);
+            this.cmbReporte.Size = new System.Drawing.Size(348, 28);
             this.cmbReporte.TabIndex = 2;
             // 
             // lblReporte
@@ -212,7 +212,7 @@
             this.lblReporte.Location = new System.Drawing.Point(36, 42);
             this.lblReporte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReporte.Name = "lblReporte";
-            this.lblReporte.Size = new System.Drawing.Size(59, 17);
+            this.lblReporte.Size = new System.Drawing.Size(71, 20);
             this.lblReporte.TabIndex = 0;
             this.lblReporte.Text = "Reporte";
             // 
@@ -222,7 +222,7 @@
             this.lblModulo.Location = new System.Drawing.Point(36, 85);
             this.lblModulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModulo.Name = "lblModulo";
-            this.lblModulo.Size = new System.Drawing.Size(57, 17);
+            this.lblModulo.Size = new System.Drawing.Size(69, 20);
             this.lblModulo.TabIndex = 1;
             this.lblModulo.Text = "Modulo";
             // 
@@ -251,6 +251,7 @@
             this.btnAyuda.Size = new System.Drawing.Size(92, 90);
             this.btnAyuda.TabIndex = 3;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // pictureBox1
             // 
@@ -270,13 +271,13 @@
             this.cmsEM.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsEliminar});
             this.cmsEM.Name = "cmsEM";
-            this.cmsEM.Size = new System.Drawing.Size(131, 26);
+            this.cmsEM.Size = new System.Drawing.Size(146, 28);
             // 
             // cmsEliminar
             // 
             this.cmsEliminar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(130, 22);
+            this.cmsEliminar.Size = new System.Drawing.Size(145, 24);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.cmsEliminar_Click);
             // 
@@ -287,7 +288,7 @@
             // 
             // frmReporteApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 721);
             this.Controls.Add(this.pnlCuerpo);

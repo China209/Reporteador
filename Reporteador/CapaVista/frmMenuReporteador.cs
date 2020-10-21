@@ -1,16 +1,8 @@
-﻿using CapaVistaReporteador;
-using CapaVistaReporteador.Mantenimientos;
+﻿using CapaVistaReporteador.Mantenimientos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaVista
+namespace CapaVistaReporteador
 {
     public partial class frmMenuReporteador : Form
     {
@@ -25,22 +17,6 @@ namespace CapaVista
             frmGestorReportes reporte = new frmGestorReportes();
             //this.Dispose();
             reporte.Show();
-        }
-
-        // boton para mostrar el modulo 
-        private void btnModulo_Click(object sender, EventArgs e)
-        {
-            frmModulo modulo = new frmModulo();
-          //  this.Dispose();
-            modulo.Show();
-        }
-
-        // boton para mostrar el aplicativo 
-        private void btnApp_Click(object sender, EventArgs e)
-        {
-            frmAplicativo aplicativo = new frmAplicativo();
-            //this.Dispose();
-            aplicativo.Show();
         }
 
         // boton para mostrar el formulario donde se asigna el reporte por modulo 

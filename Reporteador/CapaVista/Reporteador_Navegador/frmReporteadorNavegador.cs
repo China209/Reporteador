@@ -10,7 +10,7 @@ using System.Windows.Forms;
  // Si la ruta del reporte no es correcta del igual forma se desplegara el navegador del reporte
  // El navegador le permitirá moverse en todas las paginas del reporte 
 
-namespace CapaVista.Reporteador_Navegador
+namespace CapaVistaReporteador.Reporteador_Navegador
 {
     public partial class frmReporteadorNavegador : Form
     {
@@ -29,7 +29,8 @@ namespace CapaVista.Reporteador_Navegador
             }
             else
             {
-                MessageBox.Show("Error no existe la ruta", "");
+                MessageBox.Show("Error no existe la ruta, verifique que este reporte este asociado a una aplicación", "");
+                DeshabilitarComponentes();
             }
         }
 
@@ -46,19 +47,23 @@ namespace CapaVista.Reporteador_Navegador
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine(ex.Message);
-                MessageBox.Show("Path de ruta inválido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPageNumber.Enabled = false;
-                txtSearchText.Enabled = false;
-                txtZoomFactor.Enabled = false;
-                btnGoToPage.Enabled = false;
-                btnRedisplay.Enabled = false;
-                btnSearch.Enabled = false;
-                btnUpdateZoomFactor.Enabled = false;
-                lbxListCRVReport.Enabled = false;
-                cmbSelectBackColor.Enabled = false;
+                MessageBox.Show("Path de ruta inválido, revise la localización del reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DeshabilitarComponentes();
             }
+        }
+
+        private void DeshabilitarComponentes()
+        {
+            txtPageNumber.Enabled = false;
+            txtSearchText.Enabled = false;
+            txtZoomFactor.Enabled = false;
+            btnGoToPage.Enabled = false;
+            btnRedisplay.Enabled = false;
+            btnSearch.Enabled = false;
+            btnUpdateZoomFactor.Enabled = false;
+            lbxListCRVReport.Enabled = false;
+            cmbSelectBackColor.Enabled = false;
         }
 
         private void btnRedisplay_Click(object sender, System.EventArgs e)

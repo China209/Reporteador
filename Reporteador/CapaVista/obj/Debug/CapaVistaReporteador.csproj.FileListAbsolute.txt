@@ -1,8 +1,5 @@
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.csprojAssemblyReference.cache
-C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\Prototipo_No_Funcional.MDI.frmAuxiliar.resources
-C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVista.frmMenuReporteador.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.Properties.Resources.resources
-C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVista.Reporteador_Navegador.frmReporteadorNavegador.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.csproj.GenerateResource.cache
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.csproj.CoreCompileInputs.cache
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.frmGestorReportes.resources
@@ -38,3 +35,5 @@ C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.csproj.CopyComplete
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.dll
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.frmMenuReporteador.resources
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.Reporteador_Navegador.frmReporteadorNavegador.resources

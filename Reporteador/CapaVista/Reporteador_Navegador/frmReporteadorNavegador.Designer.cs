@@ -1,4 +1,4 @@
-﻿namespace CapaVista.Reporteador_Navegador
+﻿namespace CapaVistaReporteador.Reporteador_Navegador
 {
     partial class frmReporteadorNavegador
     {

@@ -52,12 +52,24 @@ namespace CapaVistaReporteador.Mantenimientos
         }
         private clsReporteAplicativo llenarCampos()
         {
-            clsReporteAplicativo auxReporteModulo = new clsReporteAplicativo();
-            auxReporteModulo.IReporte = int.Parse(cmbReporte.SelectedValue.ToString());
-            auxReporteModulo.IModulo = int.Parse(cmbModulo.SelectedValue.ToString());
-            auxReporteModulo.IAplicativo = int.Parse(cmbAplicativo.SelectedValue.ToString());
-            auxReporteModulo.IEstado = 1;
-            return auxReporteModulo;
+            if (validarIngreso() == true)
+            {
+                clsReporteAplicativo auxReporteModulo = new clsReporteAplicativo();
+                auxReporteModulo.IReporte = int.Parse(cmbReporte.SelectedValue.ToString());
+                auxReporteModulo.IModulo = int.Parse(cmbModulo.SelectedValue.ToString());
+                auxReporteModulo.IAplicativo = int.Parse(cmbAplicativo.SelectedValue.ToString());
+                auxReporteModulo.IEstado = 1;
+                return auxReporteModulo;
+            }
+            else
+            {
+                clsReporteAplicativo auxReporteModulo = new clsReporteAplicativo();
+                auxReporteModulo.IReporte = 0;
+                auxReporteModulo.IModulo = 0;
+                auxReporteModulo.IAplicativo = 0;
+                auxReporteModulo.IEstado = 0;
+                return null;
+            }
         }
 
         //limpiar todos los atributos en el formulario 
@@ -74,10 +86,18 @@ namespace CapaVistaReporteador.Mantenimientos
             this.modulo = llenarCampos();
             try
             {
-                controlModulo.insertarModulos(this.modulo);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+
+                if (modulo == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    controlModulo.insertarModulos(this.modulo);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
             }
             catch (Exception ex)
             {
@@ -99,6 +119,32 @@ namespace CapaVistaReporteador.Mantenimientos
             {
                 LimpiarComponentes();
             }
+        }
+        //Validar Ingreso
+        private bool validarIngreso()
+        {
+            if (cmbModulo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ingrese el campo Modulo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbModulo.Focus();
+                cmbModulo.SelectedIndex = -1;
+                return false;
+            }
+            else if (cmbReporte.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ingrese el campo Reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbReporte.Focus();
+                cmbReporte.SelectedIndex = -1;
+                return false;
+            }
+            else if (cmbAplicativo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ingrese el campo Aplicación/Aplicativo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbAplicativo.Focus();
+                cmbAplicativo.SelectedIndex = -1;
+                return false;
+            }
+            return true;
         }
 
         //visualiza la hora y fecha actual 
@@ -147,6 +193,11 @@ namespace CapaVistaReporteador.Mantenimientos
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "AyudasReporteador/AyudasObjetoReporteador.chm", "AsignarAplicacion.html");
         }
 
         // visualizar los datos en el datagrid 

@@ -43,11 +43,22 @@ namespace CapaVistaReporteador.Mantenimientos
         // retorna todos los datos 
         private clsReporteModulo llenarCampos()
         {
-            clsReporteModulo auxReporteModulo = new clsReporteModulo();
-            auxReporteModulo.IReporte = int.Parse(cmbReporte.SelectedValue.ToString());
-            auxReporteModulo.IModulo = int.Parse(cmbModulo.SelectedValue.ToString());
-            auxReporteModulo.IEstado = 1;
-            return auxReporteModulo;
+            if (validarIngreso() == true)
+            {
+                clsReporteModulo auxReporteModulo = new clsReporteModulo();
+                auxReporteModulo.IReporte = int.Parse(cmbReporte.SelectedValue.ToString());
+                auxReporteModulo.IModulo = int.Parse(cmbModulo.SelectedValue.ToString());
+                auxReporteModulo.IEstado = 1;
+                return auxReporteModulo;
+            }
+            else
+            {
+                clsReporteModulo auxReporteModulo = new clsReporteModulo();
+                auxReporteModulo.IReporte = 0;
+                auxReporteModulo.IModulo = 0;
+                auxReporteModulo.IEstado = 0;
+                return null;
+            }
         }
 
         // Metodo par limpiar los atributos del formulario 
@@ -63,10 +74,17 @@ namespace CapaVistaReporteador.Mantenimientos
             this.modulo = llenarCampos();
             try
             {
-                controlModulo.insertarModulos(this.modulo);
-                cargarDatos();
-                MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
+                if (modulo == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    controlModulo.insertarModulos(this.modulo);
+                    cargarDatos();
+                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
             }
             catch (Exception ex)
             {
@@ -74,6 +92,7 @@ namespace CapaVistaReporteador.Mantenimientos
                 Console.WriteLine(ex.Message);
                 return false;
             }
+
         }
 
         // metodo que limpia los atributos al momento de guardar datos
@@ -134,6 +153,31 @@ namespace CapaVistaReporteador.Mantenimientos
             {
                 e.Cancel = true;
             }
+        }
+        //Validar Ingreso
+        private bool validarIngreso()
+        {
+            if (cmbModulo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ingrese el campo Modulo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbModulo.Focus();
+                cmbModulo.SelectedIndex =- 1;
+                return false;
+            }else if (cmbReporte.SelectedIndex == -1)
+            {
+                MessageBox.Show("Ingrese el campo Reporte", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbReporte.Focus();
+                cmbReporte.SelectedIndex = -1;
+                return false;
+            }
+            else if (cmbReporte.SelectedIndex == -1 || cmbModulo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Campos Vacíos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbReporte.Focus();
+                cmbReporte.SelectedIndex = -1;
+                return false;
+            }
+            return true;
         }
 
         // validar la salida
