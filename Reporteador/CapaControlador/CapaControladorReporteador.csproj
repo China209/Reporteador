@@ -49,6 +49,7 @@
     <Compile Include="ControladoresReporteador\clsControlAsignacionAplicativo.cs" />
     <Compile Include="ControladoresReporteador\clsControlAsignacionModulo.cs" />
     <Compile Include="ControladoresReporteador\clsControlModulo.cs" />
+    <Compile Include="ControladoresReporteador\clsControlModuloReporte.cs" />
     <Compile Include="ControladoresReporteador\clsControlReporteador.cs" />
     <Compile Include="ControladoresReporteador\clsControlReportes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

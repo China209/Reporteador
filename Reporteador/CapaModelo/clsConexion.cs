@@ -15,7 +15,7 @@ namespace CapaModeloReporteador
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=clc_erp");
+            OdbcConnection conn = new OdbcConnection("Dsn=Reporteador");
             try
             {
                 if (conn.State == ConnectionState.Closed)
