@@ -8,7 +8,7 @@ using System.Windows.Forms;
  // Se podra manejar todo que tiene que ver con la visualizacion del reporte desde 
  //agregarle zoom hasta buscar una palabra en especifico
  // Si la ruta del reporte no es correcta del igual forma se desplegara el navegador del reporte
- // El navegador le permitirá moverse en todas las paginas del reporte 
+ // Visualiza de acuerdo con los reportes asignados al modulo
 
 namespace CapaVistaReporteador.ReportesModulos
 {

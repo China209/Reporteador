@@ -101,5 +101,35 @@ namespace CapaControladorReporteador.ControladoresReporteador
                 return null;
             }
         }
+        public bool verificarExistencias(int IDReporte, int IDModulo, int IDApp)
+        {
+            string datos = "";
+            try
+            {
+                string sComando = "select estado_reporte_aplicativo from reporte_aplicativo where fk_id_reporte=" + IDReporte + " and fk_id_modulo=" + IDModulo + " and fk_id_aplicacion ="+IDApp+";";
+                OdbcCommand comando = new OdbcCommand(sComando, conexion.conexion());
+                OdbcDataReader registro = comando.ExecuteReader();
+
+                while (registro.Read())
+                {
+                    datos = registro["estado_reporte_aplicativo"].ToString();
+                }
+                if (datos.Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener datos de reportes");
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
     }
 }
