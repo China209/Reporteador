@@ -1,4 +1,7 @@
-﻿using CapaControladorReporteador.ControladoresReporteador;
+﻿/*
+ Muestra los reportes por modulo y permite visualizarlos en una ventana emergente
+ */
+using CapaControladorReporteador.ControladoresReporteador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -93,10 +93,21 @@ namespace CapaVistaReporteador.Mantenimientos
                 }
                 else
                 {
-                    controlModulo.insertarModulos(this.modulo);
-                    cargarDatos();
-                    MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
+                    int id1 = int.Parse(cmbReporte.SelectedValue.ToString());
+                    int id2 = int.Parse(cmbModulo.SelectedValue.ToString());
+                    int id3 = int.Parse(cmbAplicativo.SelectedValue.ToString());
+                    if (controlModulo.verificarExistencias(id1, id2, id3)==true)
+                    {
+                        controlModulo.insertarModulos(this.modulo);
+                        cargarDatos();
+                        MessageBox.Show("Datos Correctamente Guardados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede insertar estos datos se encuentran existentes en el sistema", "ALERTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return false;
+                    }
                 }
             }
             catch (Exception ex)
