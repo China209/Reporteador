@@ -101,6 +101,18 @@
     <Compile Include="Reporteador_Navegador\frmReporteadorNavegador.Designer.cs">
       <DependentUpon>frmReporteadorNavegador.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportesModulos\frmMostraModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesModulos\frmMostraModulos.Designer.cs">
+      <DependentUpon>frmMostraModulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesModulos\frmReportesModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesModulos\frmReportesModulos.Designer.cs">
+      <DependentUpon>frmReportesModulos.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmGestorReportes.resx">
@@ -127,6 +139,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reporteador_Navegador\frmReporteadorNavegador.resx">
       <DependentUpon>frmReporteadorNavegador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesModulos\frmMostraModulos.resx">
+      <DependentUpon>frmMostraModulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesModulos\frmReportesModulos.resx">
+      <DependentUpon>frmReportesModulos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
