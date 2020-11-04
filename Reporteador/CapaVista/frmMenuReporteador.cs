@@ -1,4 +1,5 @@
 ﻿using CapaVistaReporteador.Mantenimientos;
+using CapaVistaReporteador.ReportesModulos;
 using System;
 using System.Windows.Forms;
 

@@ -44,7 +44,7 @@
             this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(147, 19);
+            this.btnReporte.Location = new System.Drawing.Point(99, 24);
             this.btnReporte.Margin = new System.Windows.Forms.Padding(4);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(310, 114);
@@ -61,7 +61,7 @@
             this.btnAsigModulo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnAsigModulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsigModulo.ForeColor = System.Drawing.Color.White;
-            this.btnAsigModulo.Location = new System.Drawing.Point(147, 144);
+            this.btnAsigModulo.Location = new System.Drawing.Point(99, 149);
             this.btnAsigModulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnAsigModulo.Name = "btnAsigModulo";
             this.btnAsigModulo.Size = new System.Drawing.Size(310, 114);
@@ -80,7 +80,7 @@
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(584, 437);
+            this.pnlMenu.Size = new System.Drawing.Size(510, 455);
             this.pnlMenu.TabIndex = 4;
             // 
             // btnAsigApp
@@ -91,7 +91,7 @@
             this.btnAsigApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnAsigApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsigApp.ForeColor = System.Drawing.Color.White;
-            this.btnAsigApp.Location = new System.Drawing.Point(147, 266);
+            this.btnAsigApp.Location = new System.Drawing.Point(99, 271);
             this.btnAsigApp.Margin = new System.Windows.Forms.Padding(4);
             this.btnAsigApp.Name = "btnAsigApp";
             this.btnAsigApp.Size = new System.Drawing.Size(310, 114);
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 437);
+            this.ClientSize = new System.Drawing.Size(510, 455);
             this.Controls.Add(this.pnlMenu);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

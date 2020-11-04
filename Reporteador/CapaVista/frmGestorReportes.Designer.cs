@@ -56,6 +56,7 @@
             this.cmsModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsMostrar = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.tltVentana = new System.Windows.Forms.ToolTip(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -178,9 +179,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(439, 13);
+            this.lblFecha.Location = new System.Drawing.Point(402, 13);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(46, 17);
+            this.lblFecha.Size = new System.Drawing.Size(56, 20);
             this.lblFecha.TabIndex = 5;
             this.lblFecha.Text = "Fecha";
             // 
@@ -190,9 +191,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(625, 13);
+            this.lblHora.Location = new System.Drawing.Point(710, 13);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(39, 17);
+            this.lblHora.Size = new System.Drawing.Size(47, 20);
             this.lblHora.TabIndex = 4;
             this.lblHora.Text = "Hora";
             // 
@@ -237,7 +238,7 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(456, 307);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(50, 17);
+            this.lblBuscar.Size = new System.Drawing.Size(62, 20);
             this.lblBuscar.TabIndex = 3;
             this.lblBuscar.Text = "Buscar";
             // 
@@ -249,7 +250,7 @@
             this.cmbBuscar.FormattingEnabled = true;
             this.cmbBuscar.Location = new System.Drawing.Point(588, 304);
             this.cmbBuscar.Name = "cmbBuscar";
-            this.cmbBuscar.Size = new System.Drawing.Size(505, 25);
+            this.cmbBuscar.Size = new System.Drawing.Size(505, 28);
             this.cmbBuscar.TabIndex = 2;
             this.cmbBuscar.SelectedIndexChanged += new System.EventHandler(this.cmbBuscar_SelectedIndexChanged);
             // 
@@ -318,14 +319,14 @@
             this.txtRuta.Enabled = false;
             this.txtRuta.Location = new System.Drawing.Point(529, 50);
             this.txtRuta.Name = "txtRuta";
-            this.txtRuta.Size = new System.Drawing.Size(296, 23);
+            this.txtRuta.Size = new System.Drawing.Size(296, 27);
             this.txtRuta.TabIndex = 5;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(131, 54);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(269, 23);
+            this.txtNombre.Size = new System.Drawing.Size(269, 27);
             this.txtNombre.TabIndex = 4;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -334,7 +335,7 @@
             this.lblRuta.AutoSize = true;
             this.lblRuta.Location = new System.Drawing.Point(461, 53);
             this.lblRuta.Name = "lblRuta";
-            this.lblRuta.Size = new System.Drawing.Size(35, 17);
+            this.lblRuta.Size = new System.Drawing.Size(43, 20);
             this.lblRuta.TabIndex = 3;
             this.lblRuta.Text = "Ruta";
             // 
@@ -343,7 +344,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(26, 57);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(61, 17);
+            this.lblNombre.Size = new System.Drawing.Size(73, 20);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
@@ -394,13 +395,13 @@
             this.cmsModificar,
             this.cmsMostrar});
             this.cmsEM.Name = "cmsEM";
-            this.cmsEM.Size = new System.Drawing.Size(181, 70);
+            this.cmsEM.Size = new System.Drawing.Size(206, 76);
             // 
             // cmsEliminar
             // 
             this.cmsEliminar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(180, 22);
+            this.cmsEliminar.Size = new System.Drawing.Size(205, 24);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.cmsEliminar_Click);
             // 
@@ -408,14 +409,14 @@
             // 
             this.cmsModificar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsModificar.Name = "cmsModificar";
-            this.cmsModificar.Size = new System.Drawing.Size(180, 22);
+            this.cmsModificar.Size = new System.Drawing.Size(205, 24);
             this.cmsModificar.Text = "Actualizar";
             this.cmsModificar.Click += new System.EventHandler(this.cmsModificar_Click);
             // 
             // cmsMostrar
             // 
             this.cmsMostrar.Name = "cmsMostrar";
-            this.cmsMostrar.Size = new System.Drawing.Size(180, 22);
+            this.cmsMostrar.Size = new System.Drawing.Size(205, 24);
             this.cmsMostrar.Text = "Mostrar Reporte";
             this.cmsMostrar.Click += new System.EventHandler(this.cmsMostrar_Click);
             // 
@@ -424,9 +425,14 @@
             this.tmrHoraFecha.Enabled = true;
             this.tmrHoraFecha.Tick += new System.EventHandler(this.tmrHoraFecha_Tick);
             // 
+            // tltVentana
+            // 
+            this.tltVentana.IsBalloon = true;
+            this.tltVentana.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // frmGestorReportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 686);
             this.Controls.Add(this.pnlCuerpo);
@@ -483,5 +489,6 @@
         private System.Windows.Forms.Timer tmrHoraFecha;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.ToolStripMenuItem cmsMostrar;
+        private System.Windows.Forms.ToolTip tltVentana;
     }
 }

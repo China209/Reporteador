@@ -27,7 +27,7 @@ namespace CapaVistaReporteador.ReportesModulos
             {
                 cargarGrid();
             }
-
+            tltVentana.SetToolTip(dgvReportes, "Seleccione el reporte que desea ver");
         }
 
         private void cargarGrid()
@@ -49,6 +49,12 @@ namespace CapaVistaReporteador.ReportesModulos
                 this.cmsMostrar.Show(this.dgvReportes, e.Location);
                 cmsMostrar.Show(Cursor.Position);
             }
+        }
+
+        private void tmrHoraFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToLongTimeString();
+            lblFecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

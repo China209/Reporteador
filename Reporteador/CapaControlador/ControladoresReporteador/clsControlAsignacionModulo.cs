@@ -1,4 +1,7 @@
-﻿using CapaModeloReporteador;
+﻿/*
+Control de Asignacion de Reporte a Modulo
+ */
+using CapaModeloReporteador;
 using CapaModeloReporteador.Clases_Reporteador;
 using System;
 using System.Collections.Generic;

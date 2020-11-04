@@ -37,10 +37,15 @@
             this.pnlInferior = new System.Windows.Forms.Panel();
             this.cmsMostrar = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mostrarReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tltVentana = new System.Windows.Forms.ToolTip(this.components);
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlCuerpo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportes)).BeginInit();
+            this.pnlInferior.SuspendLayout();
             this.cmsMostrar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +99,8 @@
             // pnlInferior
             // 
             this.pnlInferior.BackColor = System.Drawing.Color.Silver;
+            this.pnlInferior.Controls.Add(this.lblFecha);
+            this.pnlInferior.Controls.Add(this.lblHora);
             this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlInferior.Location = new System.Drawing.Point(0, 699);
             this.pnlInferior.Margin = new System.Windows.Forms.Padding(4);
@@ -117,6 +124,40 @@
             this.mostrarReporteToolStripMenuItem.Text = "Mostrar Reporte";
             this.mostrarReporteToolStripMenuItem.Click += new System.EventHandler(this.mostrarReporteToolStripMenuItem_Click);
             // 
+            // tltVentana
+            // 
+            this.tltVentana.IsBalloon = true;
+            this.tltVentana.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(335, 21);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(56, 20);
+            this.lblFecha.TabIndex = 10;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHora.AutoSize = true;
+            this.lblHora.Location = new System.Drawing.Point(592, 21);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(47, 20);
+            this.lblHora.TabIndex = 9;
+            this.lblHora.Text = "Hora";
+            // 
+            // tmrHoraFecha
+            // 
+            this.tmrHoraFecha.Enabled = true;
+            this.tmrHoraFecha.Tick += new System.EventHandler(this.tmrHoraFecha_Tick);
+            // 
             // frmReportesModulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -126,6 +167,7 @@
             this.Controls.Add(this.pnlCuerpo);
             this.Controls.Add(this.pnlSuperior);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -136,6 +178,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCuerpo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportes)).EndInit();
+            this.pnlInferior.ResumeLayout(false);
+            this.pnlInferior.PerformLayout();
             this.cmsMostrar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -150,5 +194,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ContextMenuStrip cmsMostrar;
         private System.Windows.Forms.ToolStripMenuItem mostrarReporteToolStripMenuItem;
+        private System.Windows.Forms.ToolTip tltVentana;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Timer tmrHoraFecha;
     }
 }

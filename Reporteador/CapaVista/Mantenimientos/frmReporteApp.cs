@@ -26,6 +26,12 @@ namespace CapaVistaReporteador.Mantenimientos
             CargarCombobox();
             cargarDatos();
             LimpiarComponentes();
+            tltVentana.SetToolTip(cmbAplicativo, "Seleccione la Aplicación a la que desea asignar un reporte");
+            tltVentana.SetToolTip(cmbModulo, "Seleccione el Módulo de la Aplicación");
+            tltVentana.SetToolTip(cmbReporte, "Seleccione el reporte a asignar");
+            tltVentana.SetToolTip(dgvVistaDatos, "Vista de los Datos Existentes");
+            tltVentana.SetToolTip(btnAyuda, "Dé click para ver las ayudas correspondientes a este formulario");
+            tltVentana.SetToolTip(btnGuardar, "Dé click para guardar los datos");
         }
 
         //Metodos para la busqueda de datos en el combobox 

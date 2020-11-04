@@ -1,4 +1,7 @@
-﻿using CapaModeloReporteador;
+﻿/*
+ Control del Reporteador
+ */
+using CapaModeloReporteador;
 using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
