@@ -1,0 +1,17 @@
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\bin\Debug\CapaControladorReporteador.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\bin\Debug\CapaControladorReporteador.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.csprojAssemblyReference.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.csproj.CoreCompileInputs.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.csproj.CopyComplete
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\bin\Debug\CapaModeloReporteador.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaControlador\bin\Debug\CapaModeloReporteador.pdb
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaControlador\bin\Debug\CapaControladorReporteador.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaControlador\bin\Debug\CapaControladorReporteador.pdb
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaControlador\bin\Debug\CapaModeloReporteador.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaControlador\bin\Debug\CapaModeloReporteador.pdb
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.csproj.CoreCompileInputs.cache
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.csproj.CopyComplete
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaControlador\obj\Debug\CapaControladorReporteador.pdb

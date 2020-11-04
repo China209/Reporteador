@@ -1,0 +1,37 @@
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\CapaModeloReporteador.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\CapaModeloReporteador.pdb
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Data.v19.2.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Xpo.v19.2.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Data.v19.2.xml
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Xpo.v19.2.xml
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.csprojAssemblyReference.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.csproj.CoreCompileInputs.cache
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.csproj.CopyComplete
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.dll
+C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.pdb
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\CapaModeloReporteador.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\CapaModeloReporteador.pdb
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Data.v19.2.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Xpo.v19.2.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Data.v19.2.xml
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\DevExpress.Xpo.v19.2.xml
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\de\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\es\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\ja\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\ru\DevExpress.Data.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\de\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\es\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\ja\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\bin\Debug\ru\DevExpress.Xpo.v19.2.resources.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.csproj.CoreCompileInputs.cache
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.csproj.CopyComplete
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.dll
+C:\Users\cypam\OneDrive\Desktop\Objeto Reporteador\Reporteador\Reporteador\CapaModelo\obj\Debug\CapaModeloReporteador.pdb
