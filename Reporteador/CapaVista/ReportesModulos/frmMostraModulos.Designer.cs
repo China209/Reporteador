@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMostraModulos));
             this.crptReporteContenedor = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,6 +45,7 @@
             this.txtSearchText = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.tltVentana = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -258,6 +260,11 @@
             this.lblMessage.TabIndex = 12;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tltVentana
+            // 
+            this.tltVentana.IsBalloon = true;
+            this.tltVentana.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // frmMostraModulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 22F);
@@ -298,5 +305,6 @@
         private System.Windows.Forms.TextBox txtSearchText;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.ToolTip tltVentana;
     }
 }

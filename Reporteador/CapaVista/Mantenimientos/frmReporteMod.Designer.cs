@@ -47,6 +47,7 @@
             this.cmsEM = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.tltVentana = new System.Windows.Forms.ToolTip(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlInferior.SuspendLayout();
@@ -108,11 +109,11 @@
             // 
             // lblFecha
             // 
-            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(287, 29);
+            this.lblFecha.Location = new System.Drawing.Point(261, 29);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(56, 20);
             this.lblFecha.TabIndex = 8;
@@ -120,11 +121,11 @@
             // 
             // lblHora
             // 
-            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(473, 29);
+            this.lblHora.Location = new System.Drawing.Point(518, 29);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(47, 20);
             this.lblHora.TabIndex = 7;
@@ -146,8 +147,8 @@
             // dgvVistaDatos
             // 
             this.dgvVistaDatos.AllowUserToAddRows = false;
-            this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaDatos.BackgroundColor = System.Drawing.Color.White;
@@ -238,13 +239,13 @@
             this.cmsEM.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsEliminar});
             this.cmsEM.Name = "cmsEM";
-            this.cmsEM.Size = new System.Drawing.Size(211, 56);
+            this.cmsEM.Size = new System.Drawing.Size(146, 28);
             // 
             // cmsEliminar
             // 
             this.cmsEliminar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(210, 24);
+            this.cmsEliminar.Size = new System.Drawing.Size(145, 24);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.cmsEliminar_Click);
             // 
@@ -252,6 +253,11 @@
             // 
             this.tmrHoraFecha.Enabled = true;
             this.tmrHoraFecha.Tick += new System.EventHandler(this.tmrHoraFecha_Tick);
+            // 
+            // tltVentana
+            // 
+            this.tltVentana.IsBalloon = true;
+            this.tltVentana.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // frmReporteMod
             // 
@@ -302,5 +308,6 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer tmrHoraFecha;
+        private System.Windows.Forms.ToolTip tltVentana;
     }
 }

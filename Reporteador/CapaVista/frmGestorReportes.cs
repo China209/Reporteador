@@ -21,6 +21,15 @@ namespace CapaVistaReporteador
             cargarDatos();
             BloquearBotones();
             CargarCombobox();
+            tltVentana.SetToolTip(dgvVistaDatos, "Vista de los Datos Existentes");
+            tltVentana.SetToolTip(btnAyuda, "Dé click para ver las ayudas correspondientes a este formulario");
+            tltVentana.SetToolTip(btnGuardar, "Dé click para guardar los datos");
+            tltVentana.SetToolTip(btnVerReporte, "Dé click para ver el reporte seleccionado");
+            tltVentana.SetToolTip(btnSalir, "Dé click para salir del formulario");
+            tltVentana.SetToolTip(btnSeleccionar, "Dé click para seleccionar la ubicación del reporte");
+            tltVentana.SetToolTip(btnRefrescar, "Dé click para visualizar todos los datos dentro del Grid");
+            tltVentana.SetToolTip(txtNombre, "Ingrese el nombre del reporte");
+            tltVentana.SetToolTip(cmbBuscar, "Búsqueda de Datos");
         }
 
         // metodos para la busqueda por combo box 

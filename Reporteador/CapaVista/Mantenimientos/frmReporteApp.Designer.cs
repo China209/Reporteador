@@ -49,6 +49,7 @@
             this.cmsEM = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.tltVentana = new System.Windows.Forms.ToolTip(this.components);
             this.pnlCuerpo.SuspendLayout();
             this.pnlInferior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaDatos)).BeginInit();
@@ -103,7 +104,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
-            this.lblHora.Location = new System.Drawing.Point(473, 29);
+            this.lblHora.Location = new System.Drawing.Point(559, 29);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(47, 20);
             this.lblHora.TabIndex = 7;
@@ -286,6 +287,11 @@
             this.tmrHoraFecha.Enabled = true;
             this.tmrHoraFecha.Tick += new System.EventHandler(this.tmrHoraFecha_Tick);
             // 
+            // tltVentana
+            // 
+            this.tltVentana.IsBalloon = true;
+            this.tltVentana.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // frmReporteApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -336,5 +342,6 @@
         private System.Windows.Forms.ContextMenuStrip cmsEM;
         private System.Windows.Forms.ToolStripMenuItem cmsEliminar;
         private System.Windows.Forms.Timer tmrHoraFecha;
+        private System.Windows.Forms.ToolTip tltVentana;
     }
 }

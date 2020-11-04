@@ -3,8 +3,6 @@ C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.csproj.GenerateResource.cache
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.csproj.CoreCompileInputs.cache
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.frmGestorReportes.resources
-C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.Mantenimientos.frmAplicativo.resources
-C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.Mantenimientos.frmModulo.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.Mantenimientos.frmReporteApp.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\obj\Debug\CapaVistaReporteador.Mantenimientos.frmReporteMod.resources
 C:\Users\cypam\OneDrive\Documents\Visual Studio 2019\Proyectos\ObjetoReporteador\Reporteador\CapaVista\bin\Debug\CapaVistaReporteador.dll

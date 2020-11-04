@@ -1,4 +1,7 @@
-﻿using CapaModeloReporteador;
+﻿/*
+ Control de Vista de Reportes por Modulos
+*/
+using CapaModeloReporteador;
 using System;
 using System.Collections.Generic;
 using System.Data;

@@ -31,6 +31,10 @@ namespace CapaVistaReporteador.ReportesModulos
                 MessageBox.Show("Error no existe la ruta, verifique que este reporte este asociado a una aplicación", "");
                 DeshabilitarComponentes();
             }
+            tltVentana.SetToolTip(btnGoToPage, "Buscar la página del reporte y le direcciona hacia ella");
+            tltVentana.SetToolTip(btnRedisplay, "Muestra las opciones de la barra de tareas del reporte");
+            tltVentana.SetToolTip(btnSearch, "Búsqueda de palabra dentro del reporte");
+            tltVentana.SetToolTip(btnUpdateZoomFactor, "Zoom del reporte");
         }
 
         private void MostrarReporte(string Ruta)
