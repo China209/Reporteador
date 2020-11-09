@@ -146,7 +146,7 @@
             // 
             // dgvVistaDatos
             // 
-            this.dgvVistaDatos.AllowUserToAddRows = false;
+            this.dgvVistaDatos.AllowUserToDeleteRows = false;
             this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -157,6 +157,7 @@
             this.dgvVistaDatos.Location = new System.Drawing.Point(35, 236);
             this.dgvVistaDatos.Margin = new System.Windows.Forms.Padding(0);
             this.dgvVistaDatos.Name = "dgvVistaDatos";
+            this.dgvVistaDatos.ReadOnly = true;
             this.dgvVistaDatos.RowHeadersWidth = 51;
             this.dgvVistaDatos.RowTemplate.Height = 24;
             this.dgvVistaDatos.Size = new System.Drawing.Size(857, 301);
@@ -274,7 +275,7 @@
             this.MinimizeBox = false;
             this.Name = "frmReporteMod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Asignación de Reporte a Módulo";
+            this.Text = "104 - Asignación de Reporte a Módulo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReporteMod_FormClosing);
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

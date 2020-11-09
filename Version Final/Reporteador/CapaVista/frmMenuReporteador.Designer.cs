@@ -33,6 +33,7 @@
             this.btnAsigModulo = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnAsigApp = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +74,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.White;
+            this.pnlMenu.Controls.Add(this.button1);
             this.pnlMenu.Controls.Add(this.btnAsigApp);
             this.pnlMenu.Controls.Add(this.btnAsigModulo);
             this.pnlMenu.Controls.Add(this.btnReporte);
@@ -80,7 +82,7 @@
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(510, 455);
+            this.pnlMenu.Size = new System.Drawing.Size(479, 518);
             this.pnlMenu.TabIndex = 4;
             // 
             // btnAsigApp
@@ -100,11 +102,28 @@
             this.btnAsigApp.UseVisualStyleBackColor = false;
             this.btnAsigApp.Click += new System.EventHandler(this.btnAsigApp_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CadetBlue;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(99, 393);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(310, 114);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "ASIGNACION APLICACIÓN";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmMenuReporteador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 455);
+            this.ClientSize = new System.Drawing.Size(479, 518);
             this.Controls.Add(this.pnlMenu);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -126,5 +145,6 @@
         private System.Windows.Forms.Button btnAsigModulo;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnAsigApp;
+        private System.Windows.Forms.Button button1;
     }
 }

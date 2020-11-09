@@ -112,7 +112,7 @@
             // 
             // dgvVistaDatos
             // 
-            this.dgvVistaDatos.AllowUserToAddRows = false;
+            this.dgvVistaDatos.AllowUserToDeleteRows = false;
             this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -123,6 +123,7 @@
             this.dgvVistaDatos.Location = new System.Drawing.Point(49, 226);
             this.dgvVistaDatos.Margin = new System.Windows.Forms.Padding(0);
             this.dgvVistaDatos.Name = "dgvVistaDatos";
+            this.dgvVistaDatos.ReadOnly = true;
             this.dgvVistaDatos.RowHeadersWidth = 51;
             this.dgvVistaDatos.RowTemplate.Height = 24;
             this.dgvVistaDatos.Size = new System.Drawing.Size(935, 312);
@@ -306,7 +307,7 @@
             this.MinimizeBox = false;
             this.Name = "frmReporteApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Asignar Reporte a Aplicación";
+            this.Text = "105 - Asignar Reporte a Aplicación";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReporteApp_FormClosing);
             this.pnlCuerpo.ResumeLayout(false);
             this.pnlInferior.ResumeLayout(false);

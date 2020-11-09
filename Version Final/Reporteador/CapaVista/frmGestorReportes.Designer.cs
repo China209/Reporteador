@@ -256,7 +256,7 @@
             // 
             // dgvVistaDatos
             // 
-            this.dgvVistaDatos.AllowUserToAddRows = false;
+            this.dgvVistaDatos.AllowUserToDeleteRows = false;
             this.dgvVistaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -267,6 +267,7 @@
             this.dgvVistaDatos.Location = new System.Drawing.Point(42, 363);
             this.dgvVistaDatos.Margin = new System.Windows.Forms.Padding(0);
             this.dgvVistaDatos.Name = "dgvVistaDatos";
+            this.dgvVistaDatos.ReadOnly = true;
             this.dgvVistaDatos.RowHeadersWidth = 51;
             this.dgvVistaDatos.RowTemplate.Height = 24;
             this.dgvVistaDatos.Size = new System.Drawing.Size(1051, 234);
@@ -445,7 +446,7 @@
             this.MinimizeBox = false;
             this.Name = "frmGestorReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestor de Reportes";
+            this.Text = "101 - Gestor de Reportes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGestorReportes_FormClosing);
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();

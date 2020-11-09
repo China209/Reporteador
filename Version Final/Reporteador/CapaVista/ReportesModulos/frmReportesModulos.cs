@@ -43,12 +43,28 @@ namespace CapaVistaReporteador.ReportesModulos
 
         private void dgvReportes_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            try
             {
-                this.RutaReporte = dgvReportes.Rows[e.RowIndex].Cells["Ruta Reporte"].Value.ToString();
-                this.cmsMostrar.Show(this.dgvReportes, e.Location);
-                cmsMostrar.Show(Cursor.Position);
+                if (dgvReportes.Rows[e.RowIndex].Cells["Codigo Modulo"].Value == null)
+                {
+                    MessageBox.Show("Esta fila no posee datos");
+                }
+                else
+                {
+                    if (e.Button == MouseButtons.Right)
+                    {
+                        this.RutaReporte = dgvReportes.Rows[e.RowIndex].Cells["Ruta Reporte"].Value.ToString();
+                        this.cmsMostrar.Show(this.dgvReportes, e.Location);
+                        cmsMostrar.Show(Cursor.Position);
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("No se puede seleccionar una fila sin datos", "ADVERTENCIA");
+            }
+            
         }
 
         private void tmrHoraFecha_Tick(object sender, EventArgs e)

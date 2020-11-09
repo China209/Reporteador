@@ -182,14 +182,30 @@ namespace CapaVistaReporteador
         //visualizar los datos en el datagrid 
         private void dgvVistaDatos_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            try
             {
-                iIDAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["pk_id_reporte"].Value.ToString());
-                sNombreAux = dgvVistaDatos.Rows[e.RowIndex].Cells["nombre_reporte"].Value.ToString();
-                sRutaAux = dgvVistaDatos.Rows[e.RowIndex].Cells["ruta_reporte"].Value.ToString();
-                this.cmsEM.Show(this.dgvVistaDatos, e.Location);
-                cmsEM.Show(Cursor.Position);
+                if (dgvVistaDatos.Rows[e.RowIndex].Cells["pk_id_reporte"].Value == null)
+                {
+                    MessageBox.Show("Esta fila no posee datos");
+                }
+                else
+                {
+                    if (e.Button == MouseButtons.Right)
+                    {
+                        iIDAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["pk_id_reporte"].Value.ToString());
+                        sNombreAux = dgvVistaDatos.Rows[e.RowIndex].Cells["nombre_reporte"].Value.ToString();
+                        sRutaAux = dgvVistaDatos.Rows[e.RowIndex].Cells["ruta_reporte"].Value.ToString();
+                        this.cmsEM.Show(this.dgvVistaDatos, e.Location);
+                        cmsEM.Show(Cursor.Position);
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("No se puede seleccionar una fila sin datos", "ADVERTENCIA");
+            }
+            
         }
 
         //metodo para visualizar la hora y la fecha actual 

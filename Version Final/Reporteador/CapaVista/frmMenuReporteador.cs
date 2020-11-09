@@ -51,5 +51,11 @@ namespace CapaVistaReporteador
             //this.Dispose();
             repmod.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmReportesModulos modulos = new frmReportesModulos(3);
+            modulos.Show();
+        }
     }
 }

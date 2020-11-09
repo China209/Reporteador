@@ -279,7 +279,7 @@
             this.MinimizeBox = false;
             this.Name = "frmMostraModulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reportes";
+            this.Text = "103 - Reportes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReporteadorNavegador_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);

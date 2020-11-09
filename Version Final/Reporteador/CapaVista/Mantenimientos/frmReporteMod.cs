@@ -205,12 +205,27 @@ namespace CapaVistaReporteador.Mantenimientos
         // visualizar los datos en el data
         private void dgvVistaDatos_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            try
             {
-                iIDModAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_modulo"].Value.ToString());
-                iIDRepAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_reporte"].Value.ToString());
-                this.cmsEM.Show(this.dgvVistaDatos, e.Location);
-                cmsEM.Show(Cursor.Position);
+                if (dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_reporte"].Value == null)
+                {
+                    MessageBox.Show("Esta fila no posee datos");
+                }
+                else
+                {
+                    if (e.Button == MouseButtons.Right)
+                    {
+                        iIDModAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_modulo"].Value.ToString());
+                        iIDRepAux = int.Parse(dgvVistaDatos.Rows[e.RowIndex].Cells["fk_id_reporte"].Value.ToString());
+                        this.cmsEM.Show(this.dgvVistaDatos, e.Location);
+                        cmsEM.Show(Cursor.Position);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("No se puede seleccionar una fila sin datos", "ADVERTENCIA");
             }
         }
     }

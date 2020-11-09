@@ -35,11 +35,11 @@
             this.pnlCuerpo = new System.Windows.Forms.Panel();
             this.dgvReportes = new System.Windows.Forms.DataGridView();
             this.pnlInferior = new System.Windows.Forms.Panel();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.cmsMostrar = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mostrarReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tltVentana = new System.Windows.Forms.ToolTip(this.components);
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
             this.tmrHoraFecha = new System.Windows.Forms.Timer(this.components);
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,12 +84,14 @@
             // 
             // dgvReportes
             // 
+            this.dgvReportes.AllowUserToDeleteRows = false;
             this.dgvReportes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReportes.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReportes.Location = new System.Drawing.Point(32, 34);
             this.dgvReportes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReportes.Name = "dgvReportes";
+            this.dgvReportes.ReadOnly = true;
             this.dgvReportes.RowHeadersWidth = 51;
             this.dgvReportes.RowTemplate.Height = 24;
             this.dgvReportes.Size = new System.Drawing.Size(986, 527);
@@ -107,27 +109,6 @@
             this.pnlInferior.Name = "pnlInferior";
             this.pnlInferior.Size = new System.Drawing.Size(1056, 61);
             this.pnlInferior.TabIndex = 2;
-            // 
-            // cmsMostrar
-            // 
-            this.cmsMostrar.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsMostrar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mostrarReporteToolStripMenuItem});
-            this.cmsMostrar.Name = "cmsMostrar";
-            this.cmsMostrar.Size = new System.Drawing.Size(206, 28);
-            // 
-            // mostrarReporteToolStripMenuItem
-            // 
-            this.mostrarReporteToolStripMenuItem.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mostrarReporteToolStripMenuItem.Name = "mostrarReporteToolStripMenuItem";
-            this.mostrarReporteToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
-            this.mostrarReporteToolStripMenuItem.Text = "Mostrar Reporte";
-            this.mostrarReporteToolStripMenuItem.Click += new System.EventHandler(this.mostrarReporteToolStripMenuItem_Click);
-            // 
-            // tltVentana
-            // 
-            this.tltVentana.IsBalloon = true;
-            this.tltVentana.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // lblFecha
             // 
@@ -153,6 +134,27 @@
             this.lblHora.TabIndex = 9;
             this.lblHora.Text = "Hora";
             // 
+            // cmsMostrar
+            // 
+            this.cmsMostrar.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsMostrar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarReporteToolStripMenuItem});
+            this.cmsMostrar.Name = "cmsMostrar";
+            this.cmsMostrar.Size = new System.Drawing.Size(206, 28);
+            // 
+            // mostrarReporteToolStripMenuItem
+            // 
+            this.mostrarReporteToolStripMenuItem.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mostrarReporteToolStripMenuItem.Name = "mostrarReporteToolStripMenuItem";
+            this.mostrarReporteToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
+            this.mostrarReporteToolStripMenuItem.Text = "Mostrar Reporte";
+            this.mostrarReporteToolStripMenuItem.Click += new System.EventHandler(this.mostrarReporteToolStripMenuItem_Click);
+            // 
+            // tltVentana
+            // 
+            this.tltVentana.IsBalloon = true;
+            this.tltVentana.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // tmrHoraFecha
             // 
             this.tmrHoraFecha.Enabled = true;
@@ -173,7 +175,7 @@
             this.MinimizeBox = false;
             this.Name = "frmReportesModulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reportes por Módulo";
+            this.Text = "102 - Reportes por Módulo";
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCuerpo.ResumeLayout(false);
